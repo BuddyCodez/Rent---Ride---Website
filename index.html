@@ -9,130 +9,7 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- -------------  styles  ---------- -->
-    <style>
-        body {
-            background-color: var(--dark);
-        }
-
-        nav {
-            transition: all ease-in-out 0.5s;
-        }
-
-        .navbar-toggler {
-            border-color: transparent;
-        }
-
-        .navbar-dark {
-            background-color: var(--dark);
-        }
-
-        .navbar-brand {
-            padding-top: 0px;
-            padding-bottom: 0px;
-        }
-
-        .active {
-            color: var(--theme);
-        }
-
-        .nav-head {
-            font-family: "Poppins", sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-        }
-
-        /*Color of the login button */
-        li {
-            font-family: "Josefin Sans", sans-serif;
-            padding-top: 10px;
-        }
-
-        #nav-list {
-            transform: none;
-        }
-
-        .nav-link {
-            width: 100px;
-            color: var(--dark);
-            padding-right: 10px;
-            text-align: center;
-            border-radius: 2px;
-        }
-
-        .nav-link:hover {
-            color: var(--bg);
-            border-bottom: 2px solid var(--theme);
-            transition: 0.2s all;
-        }
-
-        .nav-item {
-            display: flex;
-            justify-content: center;
-        }
-
-        #nav-holder {
-            display: flex;
-            justify-content: center;
-        }
-
-        @media (min-width: 992px) {
-            #nav-holder {
-                display: flex;
-                justify-content: right;
-            }
-
-            .nav-head {
-                display: block;
-            }
-
-            .nav-link {
-                background-color: transparent;
-                padding-right: none;
-                text-align: center;
-                border-radius: none;
-            }
-
-        }
-        .dropdown-item:active {
-            background-color: var(--theme);
-            color: var(--bg);
-        }
-        .cover {
-            filter: blur(100%);
-            background-image: url('./static/cover.jpg');
-            width: 100vw;
-            height: 35vh;
-            background-position-x: -10vw;
-            background-repeat: no-repeat;
-            background-position-y: center;
-
-        }
-
-        button.toggler {
-            color: white;
-            padding: .25rem .75rem;
-            font-size: 1.25rem;
-            line-height: 1;
-            background-color: transparent;
-            border: 1px solid transparent;
-            border-radius: .25rem;
-            transition: box-shadow .15s ease-in-out;
-        }
-
-        a:focus {
-            border: transparent;
-        }
-
-        a:visited {
-            border: transparent;
-        }
-        .dropdown-item{
-            color: var(--theme);
-            font-family: "Josefin Sans", sans-serif;
-            font-weight: 600;
-        }
-
-    </style>
+<link rel="stylesheet" href="navbar.css">
     <!-- ############ NAVBAR ############## -->
     <nav class="navbar sticky-top navbar-dark bg-color navbar-expand-lg" style="z-index: 100000000000000;">
         <a class="navbar-brand nav-head" href="#">Rent & Ride</a>
@@ -160,11 +37,11 @@
                         <a class="nav-link" href="#AboutUs">About Us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="offcanvasnavbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="true">
                             Vehicles
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: var(--dark);">
+                        <ul class="dropdown-menu position-absolute" aria-labelledby="offcanvasnavbarDropdown" style="background-color: var(--dark);">
                             <li><a class="dropdown-item" href="#">Sedans</a></li>
                             <li><a class="dropdown-item" href="#">Suv</a></li>
                             <li><a class="dropdown-item" href="#">Mini Vans</a></li>
