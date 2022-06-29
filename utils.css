@@ -141,7 +141,9 @@ color: var(--bg);
 }
 
 
-
+.position-fixed{
+  position: fixed;
+}
 
 
 

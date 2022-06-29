@@ -93,7 +93,7 @@
             <img src="./static/Hyundai-Creta-35.jpg" class="card-img-top" alt="Unable to load image">
             <div class="card-body">
                 <span class="badge rounded-pill bg-dark">Cheap</span>
-                <h4 class="card-title">Hyundai Creta </h4>
+                <h4 class="card-title" id="c1">Hyundai Creta </h4>
                 <p class="card-text">some quick information about this car. <br>
                 <div class="grid grid-two-column">
                     <h4 style="font-weight: 400; font-size: 1rem">Price:
@@ -109,14 +109,14 @@
                 </p>
             </div>
             <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red" onclick="rentCar('transmission');">Rent Now</a>
+                <a href="#" class="btn-red"  onclick="rentCar('transmission','4500','c1')">Rent Now</a>
             </div>
         </div>
         <div class="card ml-1" style="width: 18rem;">
             <img src="./static/bolero.jpg" class="card-img-top" alt="Unable to load image">
             <div class="card-body">
                 <span class="badge rounded-pill bg-dark">Cheap</span>
-                <h4 class="card-title">Bolero</h4>
+                <h4 class="card-title" id="c2">Bolero</h4>
                 <p class="card-text">some quick information about this car. <br>
                 <div class="grid grid-two-column">
                     <h4 style="font-weight: 400; font-size: 1rem">Price:
@@ -124,7 +124,7 @@
                     <span class="badge rounded-pill bg-danger">4500/day</span>
                 </div>
                 <div class="grid grid-two-column mt-2">
-                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
+                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission2">
                         <option value="Manual">Manual</option>
                         <option value="Automatic">Automatic</option>
                     </select>
@@ -132,14 +132,14 @@
                 </p>
             </div>
             <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red ">Rent Now</a>
+                <a href="#" class="btn-red" onclick="rentCar('transmission2','4500','c2')">Rent Now</a>
             </div>
         </div>
         <div class="card ml-1" style="width: 18rem;">
             <img src="./static/tuv.jpg" class="card-img-top" alt="Unable to load image">
             <div class="card-body">
                 <span class="badge rounded-pill bg-dark">Cheap</span>
-                <h4 class="card-title">Mahindra Tuv</h4>
+                <h4 class="card-title" id="c3">Mahindra Tuv</h4>
                 <p class="card-text">some quick information about this car. <br>
                 <div class="grid grid-two-column">
                     <h4 style="font-weight: 400; font-size: 1rem">Price:
@@ -147,7 +147,7 @@
                     <span class="badge rounded-pill bg-danger">4500/day</span>
                 </div>
                 <div class="grid grid-two-column mt-2">
-                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
+                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission3">
                         <option value="Manual">Manual</option>
                         <option value="Automatic">Automatic</option>
                     </select>
@@ -155,14 +155,14 @@
                 </p>
             </div>
             <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red ">Rent Now</a>
+                <a href="#" class="btn-red " onclick="rentCar('transmission3','4500','c3')">Rent Now</a>
             </div>
         </div>
         <div class="card ml-1" style="width: 18rem;">
             <img src="./static/scorpio.jpg" class="card-img-top" alt="Unable to load image">
             <div class="card-body">
                 <span class="badge rounded-pill bg-dark">Midrange</span>
-                <h4 class="card-title">Mahindra Scorpio</h4>
+                <h4 class="card-title" id="c4">Mahindra Scorpio</h4>
                 <p class="card-text">some quick information about this car. <br>
                 <div class="grid grid-two-column">
                     <h4 style="font-weight: 400; font-size: 1rem">Price:
@@ -170,7 +170,7 @@
                     <span class="badge rounded-pill bg-danger">5500/day</span>
                 </div>
                 <div class="grid grid-two-column mt-2">
-                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
+                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission4">
                         <option value="Manual">Manual</option>
                         <option value="Automatic">Automatic</option>
                     </select>
@@ -179,14 +179,14 @@
 
             </div>
             <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red ">Rent Now</a>
+                <a href="#" class="btn-red " onclick="rentCar('transmission4','5500','c4')">Rent Now</a>
             </div>
         </div>
         <div class="card ml-1" style="width: 18rem;">
             <img src="./static/xuv.jpg" class="card-img-top" alt="Unable to load image">
             <div class="card-body">
                 <span class="badge rounded-pill bg-dark">Midrange</span>
-                <h4 class="card-title">Mahindra Xuv 500</h4>
+                <h4 class="card-title" id="c5">Mahindra Xuv 500</h4>
                 <p class="card-text">some quick information about this car. <br>
                 <div class="grid grid-two-column">
                     <h4 style="font-weight: 400; font-size: 1rem">Price:
@@ -194,7 +194,7 @@
                     <span class="badge rounded-pill bg-danger">5500/day</span>
                 </div>
                 <div class="grid grid-two-column mt-2">
-                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
+                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission5">
                         <option value="Manual">Manual</option>
                         <option value="Automatic">Automatic</option>
                     </select>
@@ -204,14 +204,14 @@
             </div>
 
             <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red ">Rent Now</a>
+                <a href="#" class="btn-red " onclick="rentCar('transmission5','5500','c5')">Rent Now</a>
             </div>
         </div>
         <div class="card ml-1 " style="width: 18rem;">
             <img src="./static/harrier.jpg" class="card-img-top" alt="Unable to load image">
             <div class="card-body">
                 <span class="badge rounded-pill bg-dark">Midrange</span>
-                <h4 class="card-title">Tata Harrier</h4>
+                <h4 class="card-title" id="c6">Tata Harrier</h4>
                 <p class="card-text">some quick information about this car. <br>
                 <div class="grid grid-two-column">
                     <h4 style="font-weight: 400; font-size: 1rem">Price:
@@ -219,7 +219,7 @@
                     <span class="badge rounded-pill bg-danger">5500/day</span>
                 </div>
                 <div class="grid grid-two-column mt-2">
-                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
+                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission6">
                         <option value="Manual">Manual</option>
                         <option value="Automatic">Automatic</option>
                     </select>
@@ -228,14 +228,14 @@
 
             </div>
             <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red ">Rent Now</a>
+                <a href="#" class="btn-red " onclick="rentCar('transmission6','5500','c6')">Rent Now</a>
             </div>
         </div>
         <div class="card ml-1 " style="width: 18rem;">
             <img src="./static/g-waggon.jpg" class="card-img-top" alt="Unable to load image">
             <div class="card-body">
                 <span class="badge rounded-pill bg-dark">Expensive</span>
-                <h4 class="card-title">G Wagon</h4>
+                <h4 class="card-title" id="c7">G Wagon</h4>
                 <p class="card-text">some quick information about this car. <br>
                 <div class="grid grid-two-column">
                     <h4 style="font-weight: 400; font-size: 1rem">Price:
@@ -243,7 +243,7 @@
                     <span class="badge rounded-pill bg-danger">7000/day</span>
                 </div>
                 <div class="grid grid-two-column mt-2">
-                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
+                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission7">
                         <option value="Manual">Manual</option>
                         <option value="Automatic">Automatic</option>
                     </select>
@@ -252,14 +252,14 @@
 
             </div>
             <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red ">Rent Now</a>
+                <a href="#" class="btn-red " onclick="rentCar('transmission7','7000','c7')">Rent Now</a>
             </div>
         </div>
         <div class="card ml-1 " style="width: 18rem;">
             <img src="./static/mg-gloster.jpg" class="card-img-top" alt="Unable to load image">
             <div class="card-body">
                 <span class="badge rounded-pill bg-dark">Expensive</span>
-                <h4 class="card-title">Mg Gloster</h4>
+                <h4 class="card-title" id="c8">Mg Gloster</h4>
                 <p class="card-text">some quick information about this car. <br>
                 <div class="grid grid-two-column">
                     <h4 style="font-weight: 400; font-size: 1rem">Price:
@@ -267,7 +267,7 @@
                     <span class="badge rounded-pill bg-danger">7000/day</span>
                 </div>
                 <div class="grid grid-two-column mt-2">
-                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
+                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission8">
                         <option value="Manual">Manual</option>
                         <option value="Automatic">Automatic</option>
                     </select>
@@ -276,14 +276,14 @@
 
             </div>
             <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red" >Rent Now</a>
+                <a href="#" class="btn-red" onclick="rentCar('transmission8','7000','c8')">Rent Now</a>
             </div>
         </div>
         <div class="card ml-1 " style="width: 18rem;">
             <img src="./static/jeep-wrangler.jpg" class="card-img-top" alt="Unable to load image">
             <div class="card-body">
                 <span class="badge rounded-pill bg-dark">Expensive</span>
-                <h4 class="card-title">Jeep Wrangler</h4>
+                <h4 class="card-title" id="c9">Jeep Wrangler</h4>
                 <p class="card-text">some quick information about this car. <br>
                 <div class="grid grid-two-column">
                     <h4 style="font-weight: 400; font-size: 1rem">Price:
@@ -291,7 +291,7 @@
                     <span class="badge rounded-pill bg-danger">7000/day</span>
                 </div>
                 <div class="grid grid-two-column mt-2">
-                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
+                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission9">
                         <option value="Manual">Manual</option>
                         <option value="Automatic">Automatic</option>
                     </select>
@@ -300,7 +300,7 @@
         
             </div>
             <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red ">Rent Now</a>
+                <a href="#" class="btn-red" onclick="rentCar('transmission9','7000','c9')">Rent Now</a>
             </div>
         </div>
         
