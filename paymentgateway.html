@@ -159,6 +159,95 @@
                 transform: rotate(360deg)
             }
         }
+        .card--img, .card--img-hover{
+  background-image: url("./static/amaze.jpg");
+}
+.card--img{
+  visibility: hidden;
+  background-repeat: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.card--info--hover{
+  position: absolute;
+  padding:16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card--img-hover{
+  transition: 0.2s all ease-out;
+  background-size: cover;
+   background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  top: 0;
+}
+.Card{
+  margin-right: 25px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  width: 33.3%;
+  position: relative;
+  border-radius:12px;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0,0,0,0.1)
+}
+.Card:hover{
+  box-shadow: 0px 30px 18px -8px rgba(0,0,0,0.1);
+  transform: scale(1.09,1.09);
+}
+.card--info{
+  z-index: 2;
+  background-color: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 16px 24px 24px 24px;
+}
+.card--category{
+  text-transform: uppercase;
+   font-family: "Poppins", sans-serif;
+   font-size:13px;
+   letter-spacing: 2px;
+   font-weight: 500;
+   color: var(--theme);
+   text-shadow: none;
+}
+.card--title{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: 'Hammersmith One', sans-serif;
+}
+.Card:hover .card--img-hover{
+  height: 100%;
+  opacity: 1;
+
+}
+.Card:hover .card--info{
+background-color: rgba(255, 255, 255,0.5);
+position: relative;
+color: #f35626;
+background-image: -webkit-linear-gradient(92deg,#f35626, #feab3a);
+background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: hue 10s infinite linear;
+}
+.Card:hover .card--info--hover{
+  opacity: 1;
+}
+
     </style>
     <!-- -------------linking javascript---------- -->
 
