@@ -3,7 +3,7 @@
 :root {
   --dark: #0d0d0d;
   --blue: #131a25;
-  --bg: rgb(249 249 255);
+  --bg: white;
   --theme: #fe432f;
   --truck: #b14605;
   --bus: #c0aa86;
@@ -49,7 +49,7 @@ body{
   width: 80%;
 }
 .intro p {
-  font-size: 1vw;
+  font-size: 1rem;
 }
 .cars-2{
    margin-top: 15px;
@@ -208,9 +208,6 @@ body{
 @media (max-width: 992px) {
     .container .card{
     margin-top: 15px;
-  }
-  .intro p {
-    font-size: 2vw;
   }
   .cars,.cars-2,.cars-3{
     flex-direction: column;

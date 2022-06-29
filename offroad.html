@@ -93,7 +93,7 @@
             <img src="./static/tharbg.jpg" class="card-img-top" alt="Unable to load image">
             <div class="card-body">
                 <span class="badge rounded-pill bg-dark">Midrange</span>
-                <h4 class="card-title">Thar</h4>
+                <h4 class="card-title" id="1">Thar</h4>
                 <p class="card-text">some quick information about this car. <br>
                 <div class="grid grid-two-column">
                     <h4 style="font-weight: 400; font-size: 1rem">Price:
@@ -110,14 +110,14 @@
 
             </div>
             <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red ">Rent Now</a>
+                <a href="#" class="btn-red " onclick="rentCar('transmission','7000','1')">Rent Now</a>
             </div>
         </div>
         <div class="card ml-1" style="width: 18rem;">
             <img src="./static/gurkha.jpg" class="card-img-top" alt="Unable to load image">
             <div class="card-body">
                 <span class="badge rounded-pill bg-dark">Midrange</span>
-                <h4 class="card-title">Force Gurkha</h4>
+                <h4 class="card-title" id="2">Force Gurkha</h4>
                 <p class="card-text">some quick information about this car. <br>
                 <div class="grid grid-two-column">
                     <h4 style="font-weight: 400; font-size: 1rem">Price:
@@ -125,7 +125,7 @@
                     <span class="badge rounded-pill bg-danger">7000/day</span>
                 </div>
                 <div class="grid grid-two-column mt-2">
-                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
+                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission2">
                         <option value="Manual">Manual</option>
                         <option value="Automatic">Automatic</option>
                     </select>
@@ -135,7 +135,7 @@
             </div>
 
             <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red ">Rent Now</a>
+                <a href="#" class="btn-red " onclick="rentCar('transmission2','7000','2')">Rent Now</a>
             </div>
         </div>
 
@@ -143,7 +143,7 @@
             <img src="./static/landlover.jpg" class="card-img-top" alt="Unable to load image">
             <div class="card-body">
                 <span class="badge rounded-pill bg-dark">Expensive</span>
-                <h4 class="card-title">Land Rover</h4>
+                <h4 class="card-title" id="3">Land Rover</h4>
                 <p class="card-text">some quick information about this car. <br>
                 <div class="grid grid-two-column">
                     <h4 style="font-weight: 400; font-size: 1rem">Price:
@@ -151,7 +151,7 @@
                     <span class="badge rounded-pill bg-danger">9000/day</span>
                 </div>
                 <div class="grid grid-two-column mt-2">
-                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
+                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission3">
                         <option value="Manual">Manual</option>
                         <option value="Automatic">Automatic</option>
                     </select>
@@ -160,14 +160,14 @@
 
             </div>
             <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red ">Rent Now</a>
+                <a href="#" class="btn-red " onclick="rentCar('transmission3','9000','3')">Rent Now</a>
             </div>
         </div>
         <div class="card ml-1" style="width: 18rem;">
             <img src="./static/jeepwranglerbg.jpg" class="card-img-top" alt="Unable to load image">
             <div class="card-body">
                 <span class="badge rounded-pill bg-dark">Expensive</span>
-                <h4 class="card-title">Jeep Wrangler</h4>
+                <h4 class="card-title" id="4">Jeep Wrangler</h4>
                 <p class="card-text">some quick information about this car. <br>
                 <div class="grid grid-two-column">
                     <h4 style="font-weight: 400; font-size: 1rem">Price:
@@ -175,7 +175,7 @@
                     <span class="badge rounded-pill bg-danger">9000/day</span>
                 </div>
                 <div class="grid grid-two-column mt-2">
-                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
+                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission4">
                         <option value="Manual">Manual</option>
                         <option value="Automatic">Automatic</option>
                     </select>
@@ -184,14 +184,14 @@
 
             </div>
             <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red">Rent Now</a>
+                <a href="#" class="btn-red" onclick="rentCar('transmission4','9000','4')">Rent Now</a>
             </div>
         </div>
 <div class="card ml-1" style="width: 18rem;">
     <img src="./static/raneevo.jpg" class="card-img-top" alt="Unable to load image">
     <div class="card-body">
         <span class="badge rounded-pill bg-dark">Expensive</span>
-        <h4 class="card-title">Range Rover Evoque</h4>
+        <h4 class="card-title" id="5">Range Rover Evoque</h4>
         <p class="card-text">some quick information about this car. <br>
         <div class="grid grid-two-column">
             <h4 style="font-weight: 400; font-size: 1rem">Price:
@@ -199,7 +199,7 @@
             <span class="badge rounded-pill bg-danger">9000/day</span>
         </div>
         <div class="grid grid-two-column mt-2">
-            <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
+            <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission5">
                 <option value="Manual">Manual</option>
                 <option value="Automatic">Automatic</option>
             </select>
@@ -208,7 +208,7 @@
 
     </div>
     <div class="card-footer" style="background:transparent; border-color: transparent;">
-        <a href="#" class="btn-red">Rent Now</a>
+        <a href="#" class="btn-red" onclick="rentCar('transmission5','9000','5')">Rent Now</a>
     </div>
 </div>
 
