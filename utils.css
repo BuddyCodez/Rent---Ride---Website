@@ -16,7 +16,9 @@
 .justify-center {
   justify-content: center;
 }
-
+.position-absolute{
+  position: absolute;
+}
 .align-left{
     align-items: left;
 }
@@ -153,6 +155,7 @@ color: var(--bg);
 /* cards */
 .container {
   position: relative;
+  margin: 16px;
 }
 
 .container .card {

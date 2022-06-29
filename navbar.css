@@ -93,7 +93,7 @@
 
         .cover {
             filter: blur(50%);
-            background-image: url('./cover.jpg');
+            background-image: url('./static/cover.jpg');
             width: 100vw;
             height: 35vh;
             background-repeat: no-repeat;

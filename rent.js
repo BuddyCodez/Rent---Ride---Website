@@ -1,13 +1,14 @@
-function checkPrice(key) {
-  if (key == 'cheap' || 'c') return 4500;
-   if (key == "midrange" || "m" || 'mid') return 5500;
-   if (key == "expensive" || "exp" || 'e') return 7000;
-}
-function rentCar(selectid, keys) {
+
+function rentCar(selectid, price,name) {
     var select = document.getElementById(selectid);
     var value = select.options[select.selectedIndex].value;
-    console.log(value)
-  let price = checkPrice(keys);
-  console.log(price)
-window.location.assign("index.html");
+    let cartitle = document.getElementById(name)
+    let carimg = cartitle.parentElement.parentElement.children[0].src;
+    let image = `./static/${carimg.split("/static/")[1]}`;
+    sessionStorage.setItem("vehicle_name", cartitle.textContent);
+    sessionStorage.setItem("vehicle_price", price);
+    sessionStorage.setItem("vehicle_options", value);
+    sessionStorage.setItem("vehicle_img", image);
+
+window.location.assign("paymentgateway.html");
 }

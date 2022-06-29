@@ -9,246 +9,246 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utils.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-
-    <!-- -------------  styles  ---------- -->
-    <style>
-        body {
-            background-color: var(--blue);
-        }
-
-        nav {
-            transition: all ease-in-out 0.5s;
-        }
-
-        .navbar-toggler {
-            border-color: transparent;
-        }
-
-        .navbar-dark {
-            background-color: var(--dark);
-        }
-
-        .navbar-brand {
-            padding-top: 0px;
-            padding-bottom: 0px;
-        }
-
-        .active {
-            color: var(--theme);
-        }
-
-        .nav-head {
-            font-family: "Poppins", sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-        }
-
-        /*Color of the login button */
-        li {
-            font-family: "Josefin Sans", sans-serif;
-            padding-top: 10px;
-        }
-
-        #nav-list {
-            transform: none;
-        }
-
-        .nav-link {
-            width: 100px;
-            color: var(--dark);
-            padding-right: 10px;
-            text-align: center;
-            border-radius: 2px;
-        }
-
-        .nav-link:hover {
-            color: var(--bg);
-            border-bottom: 2px solid var(--theme);
-            transition: 0.2s all;
-        }
-
-        .nav-item {
-            display: flex;
-            justify-content: center;
-        }
-
-        #nav-holder {
-            display: flex;
-            justify-content: center;
-        }
-
-        @media (min-width: 992px) {
-            #nav-holder {
-                display: flex;
-                justify-content: right;
-            }
-
-            .nav-head {
-                display: block;
-            }
-
-            .nav-link {
-                background-color: transparent;
-                padding-right: none;
-                text-align: center;
-                border-radius: none;
-            }
-
-        }
-
-   .dropdown-item:active {
-            background-color: var(--theme);
-            color: var(--bg);
-        }
-         .dropdown-item {
-            color: var(--theme);
-        }
-        .cover {
-            filter: blur(50%);
-            background-image: url('./cover.jpg');
-            width: 100vw;
-            height: 35vh;
-            background-repeat: no-repeat;
-            background-position-y: center;
-
-        }
-
-        button.toggler {
-            color: white;
-            padding: .25rem .75rem;
-            font-size: 1.25rem;
-            line-height: 1;
-            background-color: transparent;
-            border: 1px solid transparent;
-            border-radius: .25rem;
-            transition: box-shadow .15s ease-in-out;
-        }
-    </style>
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="navbar.css">
     <!-- ############ NAVBAR ############## -->
-<nav class="navbar sticky-top navbar-dark bg-color navbar-expand-lg" style="z-index: 100000000000000;">
-    <a class="navbar-brand nav-head" href="#">Rent & Ride</a>
-    <button class="navbar-toggler" style="color: transparent;border-color: transparent" type="button"
-        data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel"
-        style="background: var(--dark)">
-        <div class="offcanvas-header">
-            <h1 class="font-poppins clr-bg" style="font-size: 20px; margin-top: 8px;">Rent & Ride </h1>
-            <button type="button" class="toggler text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><span
-                    class="clr-bg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-x-lg" viewBox="0 0 16 16">
-                        <path
-                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-                    </svg></span></button>
+    <nav class="navbar sticky-top navbar-dark bg-color navbar-expand-lg" style="z-index: 100000000000000;">
+        <a class="navbar-brand nav-head" href="#">Rent & Ride</a>
+        <button class="navbar-toggler" style="color: transparent;border-color: transparent" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg"
+            aria-labelledby="navbarOffcanvasLgLabel" style="background: var(--dark)">
+            <div class="offcanvas-header">
+                <h1 class="font-poppins clr-bg" style="font-size: 20px; margin-top: 8px;">Rent & Ride </h1>
+                <button type="button" class="toggler text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><span
+                        class="clr-bg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                        </svg></span></button>
+            </div>
+            <div id="nav-holder" class="offcanvas-body flex justify-center align-center clr-bg">
+                <ul id="nav-list" class="navbar-nav mb-2 mb-lg-0 flex justify-center align-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#AboutUs">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="true">
+                            Vehicles
+                        </a>
+                        <ul class="dropdown-menu position-absolute" aria-labelledby="navbarDropdown"
+                            style="background-color: var(--dark);">
+                            <li><a class="dropdown-item" href="#">Sedans</a></li>
+                            <li><a class="dropdown-item" href="#">Suv</a></li>
+                            <li><a class="dropdown-item" href="#">Mini Vans</a></li>
+                            <li><a class="dropdown-item" href="#">Hatchbacks</a></li>
+                            <li><a class="dropdown-item" href="#">Offroad</a></li>
+                            <li><a class="dropdown-item" href="#">Mini Bus</a></li>
+                            <li><a class="dropdown-item" href="#">Two Wheeler</a></li>
+
+                            <li><a class="dropdown-item" href="#">Bus</a></li>
+
+                            <li><a class="dropdown-item" href="#">Pickup Trucks</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="border-none btn-blue mb-auto ml-1" id="login" href="login.html">Login</a>
+                    </li>&nbsp;&nbsp;
+                    <li class="nav-item ">
+                        <a class="border-none btn-red mb-auto login" id="register" href="register.html">Register</a>
+                    </li>
+                    <li><span id="mail" class="badge rounded-pill bg-primary">Primary</span></li>
+                    <li><button id="logout" class="border-none btn-red mb-auto mr-left"
+                            onclick="logout();">Logout</button>
+                    </li>
+
+
+                </ul>
+            </div>
         </div>
-        <div id="nav-holder" class="offcanvas-body flex justify-center align-center clr-bg">
-            <ul id="nav-list" class="navbar-nav mb-2 mb-lg-0 flex justify-center align-center">
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Vehicles
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: var(--dark);">
-                        <li><a class="dropdown-item" href="#">Sedans</a></li>
-                        <li><a class="dropdown-item" href="#">Suv</a></li>
-                        <li><a class="dropdown-item" href="#">Mini Vans</a></li>
-                        <li><a class="dropdown-item" href="#">Hatchbacks</a></li>
-                        <li><a class="dropdown-item" href="#">Offroad</a></li>
-                        <li><a class="dropdown-item" href="#">Mini Bus</a></li>
-                        <li><a class="dropdown-item" href="#">Two Wheeler</a></li>
-
-                        <li><a class="dropdown-item" href="#">Bus</a></li>
-
-                        <li><a class="dropdown-item" href="#">Pickup Trucks</a></li>
-
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="border-none btn-blue mb-auto ml-1" id="login" href="login.html">Login</a>
-                </li>&nbsp;&nbsp;
-                <li class="nav-item ">
-                    <a class="border-none btn-red mb-auto login" id="register" href="register.html">Register</a>
-                </li>
-                <li><span id="mail" class="badge rounded-pill bg-primary">Primary</span></li>
-                <li><button id="logout" class="border-none btn-red mb-auto mr-left" onclick="logout();">Logout</button>
-                </li>
-
-
-            </ul>
-        </div>
-    </div>
-</nav>
+    </nav>
 
 
 </head>
 
-<body style="color:var(--blue)"><center>
-<h1 style="color: white;">Register Your Account.</h1>
-<div class="register font-sans clr-bg" style="width: 60vw; margin-top: 25px;">
-    
-<form  method="post" id="register">
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" name="field1" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your personal details with anyone else.</div>
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" name="field2" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary" onclick="register();">Submit</button>
-</form>
+<body>
+    <div class="register font-sans clr-bg">
+        <div class="background">
+            <div class="content">
+                <header>Register Account</header>
+                <p>We'll never share your details with anyone else</p>
+                <form id="register">
+                    <div class="field">
+                        <span class="fa fa-user"></span>
+                        <input type="email" name="email" id="field1" required placeholder="Enter Your Email Id">
+                    </div>
+                    <div class="field space">
+                        <span class="fa fa-lock"></span>
+                        <input type="password" name="password" id="field2" required placeholder="Enter your password" class="pass-key">
+                        <span class="show" onclick="check()">SHOW</span>
+                    </div>
+                    <div class="field">
+                       <a  onclick="register()" href="index.html"> Register</a>
+                    </div>
+                </form>
+            </div>
 
-</div>
-</center>
+        </div>
+    </div>
+
     <!-- -------------linking javascript---------- -->
     <script>
-       
-function register(e) {
-    const formElem = document.querySelector('form');
-        formElem.addEventListener('formdata', (e) => {
-        console.log('formdata fired');
+function check(){
+          let pass_field = document.querySelector(".pass-key")
+    let show_btn = document.querySelector(".show");
+        if (pass_field.type == "password") {
+            pass_field.type = "text";
+            show_btn.textContent = "HIDE";
+            show_btn.style.color = "var(--theme)";
+        } else {
+            pass_field.type = "password";
+            show_btn.textContent = "SHOW";
+            show_btn.style.color = "black"
+        }
+}
+        function register(e) {
 
-        // modifies the form data
-            const formData = e.formData;
-            let email = formData.get('field1');
-            let pass = formData.get('field2');
-        // formdata gets modified by the formdata event
-            sessionStorage.setItem(email, pass);
-            sessionStorage.setItem('logged', email);
-            console.log(sessionStorage.getItem('logged'))
-        //     let location = window.location.toString().split('/')
-            
-        //     location.pop();
-        //   console.log( window.location.href.replace = location.join("") + "/index.html")
-         
-    });
-            }
+                let email = document.getElementById("field1").value;
+                let pass =  document.getElementById("field2").value;
+                console.log(email);
+                console.log(pass);
+                sessionStorage.setItem(email, pass);
+                sessionStorage.setItem('logged', email);
+                console.log(sessionStorage.getItem('logged'))
+    
+        }
 
-            const form = document.getElementById("register");
-            form.addEventListener("submit", register);
+        const form = document.getElementById("register");
+        form.addEventListener("submit", register);
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 </body>
+<style>
+    .background {
+        background-image: url("./static/background-cover.jpg");
+        height: 92.5vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .background::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background: rgba(255, 255, 255, 0.200);
+    }
+
+    .content {
+        border-radius: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 999;
+        text-align: center;
+        padding: 60px 32px;
+        width: 370px;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.133);
+        border: 1px solid #fff;
+        backdrop-filter: blur(3px);
+        box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.203);
+        color: black;
+    }
+
+    .content header {
+        color: black;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0 0 35px 0;
+        font-family: "Josefin Sans", sans-serif;
+
+    }
+    .field{
+        position: relative;
+        height: 45px;
+        width: 100%;
+        display: flex;
+        background: rgba(255, 255, 255, 0.94);
+    }
+    .field span{
+        color: #222;
+        width: 40px;
+        line-height: 45px;
+    }
+    .field input,a{
+        height: 100%;
+        width: 100%;
+        background: transparent;
+        border:none;
+        outline: none;
+        color: #222;
+        text-decoration: none;
+        text-align: center;
+        font-size: 16px;
+         font-family: "Josefin Sans", sans-serif;
+    }
+
+    .space{
+        margin-top:20px;
+    }
+
+    .show{
+        position:absolute;
+        right: 13px;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+         font-family: "Poppins", sans-serif;
+    }
+    .field a{
+        background: var(--theme);
+        border: 1px solid #a70000;
+        color:white;
+        text-align: center;
+        letter-spacing: 1px;
+        font-size: x-large;
+        font-weight: 600;
+        cursor: pointer;
+         font-family: "Josefin Sans", sans-serif;
+         transition: all 0.5s ease;
+    }
+    .field a:hover{
+        background: #e40d0df5;
+    }
+    span{
+        margin-left: 8px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        font-size:16px;
+        font-family: "Poppins", sans-serif;
+    }
+
+</style>
 
 </html>

@@ -9,123 +9,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utils.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <!-- -------------  styles  ---------- -->
-    <style>
-        body {
-            background-color: var(--blue);
-        }
-
-        nav {
-            transition: all ease-in-out 0.5s;
-        }
-
-        .navbar-toggler {
-            border-color: transparent;
-        }
-
-        .navbar-dark {
-            background-color: var(--dark);
-        }
-
-        .navbar-brand {
-            padding-top: 0px;
-            padding-bottom: 0px;
-        }
-
-        .active {
-            color: var(--theme);
-        }
-
-        .nav-head {
-            font-family: "Poppins", sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-        }
-
-        /*Color of the login button */
-        li {
-            font-family: "Josefin Sans", sans-serif;
-            padding-top: 10px;
-        }
-
-        #nav-list {
-            transform: none;
-        }
-
-        .nav-link {
-            width: 100px;
-            color: var(--dark);
-            padding-right: 10px;
-            text-align: center;
-            border-radius: 2px;
-        }
-
-        .nav-link:hover {
-            color: var(--bg);
-            border-bottom: 2px solid var(--theme);
-            transition: 0.2s all;
-        }
-
-        .nav-item {
-            display: flex;
-            justify-content: center;
-        }
-
-        #nav-holder {
-            display: flex;
-            justify-content: center;
-        }
-
-        @media (min-width: 992px) {
-            #nav-holder {
-                display: flex;
-                justify-content: right;
-            }
-
-            .nav-head {
-                display: block;
-            }
-
-            .nav-link {
-                background-color: transparent;
-                padding-right: none;
-                text-align: center;
-                border-radius: none;
-            }
-
-        }
-  .dropdown-item:active {
-            background-color: var(--theme);
-            color: var(--bg);
-        }
-          .dropdown-item {
-            color: var(--theme);
-        }
-
-
-        .cover {
-            filter: blur(50%);
-            background-image: url('./cover.jpg');
-            width: 100vw;
-            height: 35vh;
-            background-repeat: no-repeat;
-            background-position-y: center;
-
-        }
-
-        button.toggler {
-            color: white;
-            padding: .25rem .75rem;
-            font-size: 1.25rem;
-            line-height: 1;
-            background-color: transparent;
-            border: 1px solid transparent;
-            border-radius: .25rem;
-            transition: box-shadow .15s ease-in-out;
-        }
-    </style>
+    <link rel="stylesheet" href="navbar.css">
     <!-- ############ NAVBAR ############## -->
     <nav class="navbar sticky-top navbar-dark bg-color navbar-expand-lg" style="z-index: 100000000000000;">
         <a class="navbar-brand nav-head" href="#">Rent & Ride</a>
@@ -150,14 +36,14 @@
                         <a class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="index.html#AboutUs">About Us</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                            data-bs-toggle="dropdown" aria-expanded="true">
                             Vehicles
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
+                        <ul class="dropdown-menu position-absolute" aria-labelledby="navbarDropdown"
                             style="background-color: var(--dark);">
                             <li><a class="dropdown-item" href="#">Sedans</a></li>
                             <li><a class="dropdown-item" href="#">Suv</a></li>
@@ -199,65 +85,54 @@
 
 </head>
 
-<body style="color:var(--blue)">
-    <center>
-        <h1 style="color: white;">Login To Your Account.</h1>
-        <div class="register font-sans clr-bg" style="width: 60vw; margin-top: 25px;">
-
-            <form method="post" id="login">
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" name="field1" id="exampleInputEmail1"
-                        aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your personal details with anyone else.</div>
+<body>
+<div class="register font-sans clr-bg">
+    <div class="background">
+        <div class="content">
+            <header>Login Account</header>
+            <p>We'll never share your details with anyone else</p>
+            <form id="register">
+                <div class="field">
+                    <span class="fa fa-user"></span>
+                    <input type="email" name="email" id="field1" required placeholder="Enter Your Email Id">
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" name="field2" id="exampleInputPassword1">
+                <div class="field space">
+                    <span class="fa fa-lock"></span>
+                    <input type="password" name="password" id="field2" required placeholder="Enter your password"
+                        class="pass-key">
+                    <span class="show" onclick="check()">SHOW</span>
                 </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                <div class="field">
+                    <a onclick="login()" class="login">Login</a>
                 </div>
-                <button type="submit" class="btn btn-primary" onclick="login();">Submit</button>
             </form>
-            <div id="liveAlertPlaceholder"></div>
+           
         </div>
-    </center>
+    </div>
+    
+</div>
     <!-- -------------linking javascript---------- -->
     <script>
-        const form = document.getElementById("login");
-            form.addEventListener("submit", login);
-
-        function alert(message, type) {
-            let alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-            alertPlaceholder.innerHTML = '<div class="alert alert-' + type + '" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
-        }
-
+        const form = document.getElementById("login");;
         function login(e) {
-            const formElem = document.querySelector('form');
-            formElem.addEventListener('formdata', (e) => {
-                console.log('Login Form Fired');
-
-                // modifies the form data
-                const formData = e.formData;
-                let email = formData.get('field1');
-                let pass = formData.get('field2');
+                     let email = document.getElementById("field1").value;
+            let pass = document.getElementById("field2").value;
                 // formdata gets modified by the formdata event
                 let authenticate = sessionStorage.getItem(email);
                 if (authenticate) {
                     if(authenticate === pass ){
                     console.log("user logged in")
                     sessionStorage.setItem('logged', email);
+                    
                     } else{
-                        alert('INCORRECT PASSWORD', 'danger')
+                        alert('INCORRECT PASSWORD')
                     }
                 } else {
-                    alert('Sorry its seems like you havent registerd your account yet! kindly please register.', 'danger')
+                    alert('Sorry its seems like you havent registerd your account yet! kindly please register.')
 
                 }
-                console.log("login fired")
-            });
+            
+            window.location.href = "index.html";
         }
 
         
@@ -265,6 +140,120 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+        <style>
+            .background {
+                background-image: url("./static/background-cover.jpg");
+                height: 92.5vh;
+                background-size: cover;
+                background-position: center;
+            }
+        
+            .background::after {
+                position: absolute;
+                content: "";
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100vw;
+                height: 100vh;
+                background-repeat: no-repeat;
+                background: rgba(255, 255, 255, 0.200);
+            }
+        
+            .content {
+                border-radius: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 999;
+                text-align: center;
+                padding: 60px 32px;
+                width: 370px;
+                transform: translate(-50%, -50%);
+                background: rgba(255, 255, 255, 0.133);
+                border: 1px solid #fff;
+                backdrop-filter: blur(3px);
+                box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.203);
+                color: black;
+            }
+        
+            .content header {
+                color: black;
+                font-size: 30px;
+                font-weight: bold;
+                margin: 0 0 35px 0;
+                font-family: "Josefin Sans", sans-serif;
+        
+            }
+        
+            .field {
+                position: relative;
+                height: 45px;
+                width: 100%;
+                display: flex;
+                background: rgba(255, 255, 255, 0.94);
+            }
+        
+            .field span {
+                color: #222;
+                width: 40px;
+                line-height: 45px;
+            }
+        
+            .field input,
+            a {
+                height: 100%;
+                width: 100%;
+                background: transparent;
+                border: none;
+                outline: none;
+                color: #222;
+                text-decoration: none;
+                text-align: center;
+                font-size: 16px;
+                font-family: "Josefin Sans", sans-serif;
+            }
+        
+            .space {
+                margin-top: 20px;
+            }
+        
+        
+            .show {
+                position: absolute;
+                right: 13px;
+                font-size: 13px;
+                font-weight: 700;
+                cursor: pointer;
+                font-family: "Poppins", sans-serif;
+            }
+        
+            .field a {
+                background: var(--theme);
+                border: 1px solid #a70000;
+                color: white;
+                text-align: center;
+                letter-spacing: 1px;
+                font-size: x-large;
+                font-weight: 600;
+                cursor: pointer;
+                font-family: "Josefin Sans", sans-serif;
+                transition: all 0.5s ease;
+            }
+        
+            .field a:hover {
+                background: #e40d0df5;
+            }
+        
+            span {
+                margin-left: 5px;
+                font-weight: 800;
+                letter-spacing: 1px;
+                font-size: 16px;
+                font-family: "Poppins", sans-serif;
+            }
+        </style>
 </body>
 
 </html>

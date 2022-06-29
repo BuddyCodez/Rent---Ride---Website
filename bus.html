@@ -87,152 +87,54 @@
 
 <body style="color:black; background-color: var(--bg);">
 
-    <section class="font-worksans flex flex-wrap justify-center" style="height:auto;margin-top: 20px" id="hatchbacks">
-        <div class="card" style="width: 18rem;">
-            <img src="./static/alto.jpg" class="card-img-top" alt="Unable to load image">
-            <div class="card-body">
-                <span class="badge rounded-pill bg-dark">Cheap</span>
-                <h4 class="card-title">Maruti suzuki Alto 800</h4>
-                <p class="card-text">some quick information about this car. <br>
-                <div class="grid grid-two-column">
-                    <h4 style="font-weight: 400; font-size: 1rem">Price:
-                    </h4>
-                    <span class="badge rounded-pill bg-danger">4500/day</span>
-                </div>
-                <div class="grid grid-two-column mt-2">
-                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
-                        <option value="Manual">Manual</option>
-                    </select>
-                </div>
-                </p>
-            </div>
-            <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red" onclick="rentCar('transmission');">Rent Now</a>
-            </div>
-        </div>
+    <section class="font-worksans flex flex-wrap justify-center" style="height:auto;margin-top: 20px;" id="sydens">
+        
         <div class="card ml-1" style="width: 18rem;">
-            <img src="./static/swift-bg.jpg" class="card-img-top" alt="Unable to load image">
-            <div class="card-body">
-                <span class="badge rounded-pill bg-dark">Cheap</span>
-                <h4 class="card-title">Maruti suzuki Swift</h4>
-                <p class="card-text">some quick information about this car. <br>
-                <div class="grid grid-two-column">
-                    <h4 style="font-weight: 400; font-size: 1rem">Price:
-                    </h4>
-                    <span class="badge rounded-pill bg-danger">4500/day</span>
-                </div>
-                <div class="grid grid-two-column mt-2">
-                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
-                        <option value="Manual">Manual</option>
-                        <option value="Automatic">Automatic</option>
-                    </select>
-                </div>
-                </p>
-            </div>
-            <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red ">Rent Now</a>
-            </div>
-        </div>
-        <div class="card ml-1" style="width: 18rem;">
-            <img src="./static/grandi10.jpg" class="card-img-top" alt="Unable to load image">
-            <div class="card-body">
-                <span class="badge rounded-pill bg-dark">Midrange</span>
-                <h4 class="card-title">Hyundai Grand I10</h4>
-                <p class="card-text">some quick information about this car. <br>
-                <div class="grid grid-two-column">
-                    <h4 style="font-weight: 400; font-size: 1rem">Price:
-                    </h4>
-                    <span class="badge rounded-pill bg-danger">5500/day</span>
-                </div>
-                <div class="grid grid-two-column mt-2">
-                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
-                        <option value="Manual">Manual</option>
-                        <option value="Automatic">Automatic</option>
-                    </select>
-                </div>
-                </p>
-
-            </div>
-            <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red ">Rent Now</a>
-            </div>
-        </div>
-        <div class="card ml-1" style="width: 18rem;">
-            <img src="./static/i20.jpg" class="card-img-top" alt="Unable to load image">
-            <div class="card-body">
-                <span class="badge rounded-pill bg-dark">Midrange</span>
-                <h4 class="card-title">Hyundai i20</h4>
-                <p class="card-text">some quick information about this car. <br>
-                <div class="grid grid-two-column">
-                    <h4 style="font-weight: 400; font-size: 1rem">Price:
-                    </h4>
-                    <span class="badge rounded-pill bg-danger">5500/day</span>
-                </div>
-                <div class="grid grid-two-column mt-2">
-                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
-                        <option value="Manual">Manual</option>
-                        <option value="Automatic">Automatic</option>
-                    </select>
-                </div>
-                </p>
-
-            </div>
-
-            <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red ">Rent Now</a>
-            </div>
-        </div>
-
-        <div class="card ml-1 " style="width: 18rem;">
-            <img src="./static/mercedesAclass.jpg" class="card-img-top" alt="Unable to load image">
+            <img src="./static/volvob11.jpg" class="card-img-top" alt="ciaz">
             <div class="card-body">
                 <span class="badge rounded-pill bg-dark">Expensive</span>
-                <h4 class="card-title">Mercedes A class</h4>
+                <h4 class="card-title">Volvo B11r</h4>
                 <p class="card-text">some quick information about this car. <br>
                 <div class="grid grid-two-column">
                     <h4 style="font-weight: 400; font-size: 1rem">Price:
                     </h4>
-                    <span class="badge rounded-pill bg-danger">7000/day</span>
+                    <span class="badge rounded-pill bg-danger">9000/day</span>
                 </div>
                 <div class="grid grid-two-column mt-2">
                     <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
                         <option value="Manual">Manual</option>
-                        <option value="Automatic">Automatic</option>
                     </select>
                 </div>
                 </p>
 
             </div>
             <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red ">Rent Now</a>
+                <button class="btn-red" onclick="rentCar('transmission','cheap')">Rent Now</button>
             </div>
         </div>
-        <div class="card ml-1 " style="width: 18rem;">
-            <img src="./static/pologt.jpg" class="card-img-top" alt="Unable to load image">
+        <div class="card ml-1" style="width: 18rem;">
+            <img src="./static/mercedesbus.jpg" class="card-img-top" alt="ciaz">
             <div class="card-body">
                 <span class="badge rounded-pill bg-dark">Expensive</span>
-                <h4 class="card-title">volkswagen Polo Gt - (RE)</h4>
+                <h4 class="card-title">Scania</h4>
                 <p class="card-text">some quick information about this car. <br>
                 <div class="grid grid-two-column">
                     <h4 style="font-weight: 400; font-size: 1rem">Price:
                     </h4>
-                    <span class="badge rounded-pill bg-danger">7000/day</span>
+                    <span class="badge rounded-pill bg-danger">9000/day</span>
                 </div>
                 <div class="grid grid-two-column mt-2">
                     <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission">
                         <option value="Manual">Manual</option>
-                        <option value="Automatic">Automatic</option>
                     </select>
                 </div>
                 </p>
 
             </div>
             <div class="card-footer" style="background:transparent; border-color: transparent;">
-                <a href="#" class="btn-red">Rent Now</a>
+                <button class="btn-red" onclick="rentCar('transmission','cheap')">Rent Now</button>
             </div>
         </div>
-
-
     </section>
     <!-- -------------linking javascript---------- -->
 
