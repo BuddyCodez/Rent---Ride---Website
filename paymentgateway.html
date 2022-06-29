@@ -151,13 +151,13 @@
         .spinner-wheel {
             height: 50vh;
             width: auto;
-            animation: spinning 2s infinite;
+            animation: spinning 3s infinite;
         }
 
         @keyframes spinning {
 
             to {
-                transform: rotate(1000deg)
+                transform: rotate(1200deg)
             }
         }
 
@@ -277,7 +277,7 @@
         window.addEventListener("load", function () {
             setTimeout(() => {
                 document.querySelector("#loader").style.display = "none"
-            }, 2000)
+            }, 1800)
             let name = sessionStorage.getItem("vehicle_name");
             let image = sessionStorage.getItem("vehicle_img");
             let price = sessionStorage.getItem("vehicle_price");
