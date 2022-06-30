@@ -179,6 +179,15 @@ body{
 .container .card .contentBx .size span:hover {
   background: #dc2c50;
 }
+
+
+
+
+.card{
+  margin-top: 40px;
+  margin: 30px;
+}
+
 /* ########################## Card Payment Gateway ############# */
  
 
