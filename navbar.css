@@ -16,10 +16,6 @@
             background-color: var(--dark);
         }
 
-        .navbar-brand {
-            padding-top: 0px;
-            padding-bottom: 0px;
-        }
 
         .active {
             color: var(--theme);
@@ -37,9 +33,6 @@
             padding-top: 10px;
         }
 
-        #nav-list {
-            transform: none;
-        }
 
         .nav-link {
             width: 100px;
@@ -60,16 +53,9 @@
             justify-content: center;
         }
 
-        #nav-holder {
-            display: flex;
-            justify-content: center;
-        }
+
 
         @media (min-width: 992px) {
-            #nav-holder {
-                display: flex;
-                justify-content: right;
-            }
 
             .nav-head {
                 display: block;
