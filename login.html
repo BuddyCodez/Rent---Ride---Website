@@ -123,6 +123,7 @@
                     if(authenticate === pass ){
                     console.log("user logged in")
                     sessionStorage.setItem('logged', email);
+                    window.location.href = "index.html";
                     
                     } else{
                         alert('INCORRECT PASSWORD')
@@ -132,7 +133,7 @@
 
                 }
             
-            window.location.href = "index.html";
+            
         }
 
         

@@ -101,7 +101,7 @@
                         <span class="show" onclick="check()">SHOW</span>
                     </div>
                     <div class="field">
-                       <a  onclick="register()" href="index.html"> Register</a>
+                       <a  onclick="register()"> Register</a>
                     </div>
                 </form>
             </div>
@@ -128,11 +128,11 @@ function check(){
 
                 let email = document.getElementById("field1").value;
                 let pass =  document.getElementById("field2").value;
-                console.log(email);
-                console.log(pass);
+                if(!pass || !email) return alert("Please Enter Email and Password to Continue.")
                 sessionStorage.setItem(email, pass);
                 sessionStorage.setItem('logged', email);
-                console.log(sessionStorage.getItem('logged'))
+                window.location.href = "index.html";
+                console.log("Redirected.")
     
         }
 

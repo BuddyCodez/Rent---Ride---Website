@@ -109,28 +109,28 @@
         <div class="flex flex-wrap">
 
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Googlepay"
                     checked>
                 <label class="form-check-label" for="inlineRadio1">Googlepay (Recommanded)</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                    value="option2">
+                    value="Paytm">
                 <label class="form-check-label" for="inlineRadio2">Paytm</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                    value="option3">
+                    value="Crypto Currency">
                 <label class="form-check-label" for="inlineRadio3">Crypto Currency</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
-                    value="option4">
+                    value="Upi">
                 <label class="form-check-label" for="inlineRadio4">Upi</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
-                    value="option5">
+                    value="Cash on Pickup">
                 <label class="form-check-label" for="inlineRadio5">Cash on PickUp</label>
             </div>
         </div>
@@ -141,7 +141,6 @@
         </button>
     </section>
     <style>
-      
         .vehicle__image {
             height: 40vh;
             width: 25vw;
@@ -218,12 +217,14 @@
             margin-bottom: 50px;
             cursor: pointer;
         }
-  @media (max-width:993px) {
-             .Card {
-                 width: 84%;
-                 margin-bottom: 50px;
-             }
+
+        @media (max-width:993px) {
+            .Card {
+                width: 84%;
+                margin-bottom: 50px;
+            }
         }
+
         .Card:hover {
             box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
             transform: scale(1.09, 1.09);
@@ -236,7 +237,7 @@
             border-top-left-radius: 12px;
             border-top-right-radius: 12px;
             padding: 16px 24px 24px 24px;
-            
+
         }
 
         .card--category {
@@ -281,7 +282,10 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <script src="rent.js"></script>
+    <script src="logincheck.js">
+    </script>
     <script>
+    checklogin(false);
         window.addEventListener("load", function () {
             setTimeout(() => {
                 document.querySelector("#loader").style.display = "none"
@@ -289,9 +293,9 @@
             let name = sessionStorage.getItem("vehicle_name");
             let image = sessionStorage.getItem("vehicle_img");
             let price = sessionStorage.getItem("vehicle_price");
-            let options =  sessionStorage.getItem("vehicle_options");
+            let options = sessionStorage.getItem("vehicle_options");
             let image_el = document.querySelector(".card--img");
-           
+
             let another_img = document.querySelector(".card--img-hover");
             if (image != null && price != null && name != null && options != null) {
                 image_el.style.backgroundImage = "url(" + image + ")";
@@ -304,17 +308,31 @@
         function payment() {
             let el1 = document.getElementById('pdate').value;
             let el2 = document.getElementById('rdate').value;
+            // -------- checking logging system ---------------------
+
+            let logged = sessionStorage.getItem("logged");
+            if (!logged) {
+                setTimeout(() => {
+                    return alert("You Must Login Before Renting a Vehicle.")
+                }, 1000)
+            }
+            // ---------------- END ----------------
             let pickup = new Date(el1).getDate();
             let Return = new Date(el2).getDate();
             document.getElementById('pay').disabled = true;
             let button = document.getElementById('pay').innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Processing Payment.....`;
-            console.log(pickup)
-            console.log(Return)
-            if (Return < pickup) {
-                alert("Please Enter a Valid Return Date.");
+            if (Return < pickup || !Return || !pickup) {
+                alert("Please Enter a Valid Pickup and Return Date.");
                 document.getElementById('pay').disabled = false;
                 let button = document.getElementById('pay').innerHTML = `Pay Now`;
             }
+            // ---------------- checking payment method -----------------
+
+            var radios = document.getElementsByName("inlineRadioOptions");
+            var selected = Array.from(radios).find(radio => radio.checked);
+            alert(selected.value);
+
+            //----------------- END ----------------
         }
     </script>
 </body>

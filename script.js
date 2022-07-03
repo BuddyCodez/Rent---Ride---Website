@@ -1,52 +1,27 @@
+
 let readbtn = document.getElementById("readbtn");
-readbtn.addEventListener("click", (e) => {
-  let div = document.getElementById("collapseExample");
-  if (readbtn.classList.contains("collapsed")) {
-    readbtn.innerHTML =
-      "Read More " +
-      `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down"
+if (readbtn) {
+  readbtn.addEventListener("click", (e) => {
+    let div = document.getElementById("collapseExample");
+    if (readbtn.classList.contains("collapsed")) {
+      readbtn.innerHTML =
+        "Read More " +
+        `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down"
         viewBox="0 0 16 16">
         <path fill-rule="evenodd"
             d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
     </svg>`;
-  } else {
-    readbtn.innerHTML =
-      "Read Less " +
-      `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+    } else {
+      readbtn.innerHTML =
+        "Read Less " +
+        `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
 </svg>`;
-  }
-});
-function checklogin() {
-  console.log("login check fired");
-  let logged = sessionStorage.getItem("logged");
-
-  let element = document.getElementById("mail");
-  let button1 = document.getElementById("login");
-  let button2 = document.getElementById("register");
-  let logoutbtn = document.getElementById("logout");
-  if (logged) {
-    console.log("user found.");
-
-    var toastLiveExample = document.getElementById("liveToast");
-    var toast = new bootstrap.Toast(toastLiveExample);
-    document.getElementById("body").innerText = logged;
-    let time = new Date();
-    document.getElementById("time").innerText = time;
-    toast.show();
-
-    button1.style = "display: none;";
-    button2.style = "display: none;";
-    element.innerHTML = "Email:" + logged;
-    element.style = "display: block;";
-    logoutbtn.style = "display: block;";
-  } else {
-    element.style = "display: none;";
-    logoutbtn.style = "display: none;";
-  }
+    }
+  })
 }
+
 window.addEventListener("load", (e) => {
-  console.log("loaded");
   checklogin();
 });
 
