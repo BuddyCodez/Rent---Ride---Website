@@ -98,7 +98,7 @@
                     <div class="field space">
                         <span class="fa fa-lock"></span>
                         <input type="password" name="password" id="field2" required placeholder="Enter your password" class="pass-key">
-                        <span class="show" onclick="check()">SHOW</span>
+                        <span class="show-btn" onclick="check()">show-btn</span>
                     </div>
                     <div class="field">
                        <a  onclick="register()"> Register</a>
@@ -113,15 +113,15 @@
     <script>
 function check(){
           let pass_field = document.querySelector(".pass-key")
-    let show_btn = document.querySelector(".show");
+    let show-btn_btn = document.querySelector(".show-btn");
         if (pass_field.type == "password") {
             pass_field.type = "text";
-            show_btn.textContent = "HIDE";
-            show_btn.style.color = "var(--theme)";
+            show-btn_btn.textContent = "HIDE";
+            show-btn_btn.style.color = "var(--theme)";
         } else {
             pass_field.type = "password";
-            show_btn.textContent = "SHOW";
-            show_btn.style.color = "black"
+            show-btn_btn.textContent = "show-btn";
+            show-btn_btn.style.color = "black"
         }
 }
         function register(e) {
@@ -218,7 +218,7 @@ function check(){
         margin-top:20px;
     }
 
-    .show{
+    .show-btn{
         position:absolute;
         right: 13px;
         font-size: 13px;
