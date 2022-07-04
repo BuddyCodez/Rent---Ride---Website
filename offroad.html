@@ -67,11 +67,17 @@
                     </li>
                     <li class="nav-item ">
                         <a class="border-none btn-blue mb-auto ml-1" id="login" href="login.html">Login</a>
-                    </li>&nbsp;&nbsp;
+                    </li>
                     <li class="nav-item ">
                         <a class="border-none btn-red mb-auto login" id="register" href="register.html">Register</a>
                     </li>
-                    <li><span id="mail" class="badge rounded-pill bg-primary">Primary</span></li>
+                    <li><button type="button" class="btn btn-primary position-relative" id="mail">
+                            Profile
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </button></li>
                     <li><button id="logout" class="border-none btn-red mb-auto mr-left"
                             onclick="logout();">Logout</button>
                     </li>
@@ -88,7 +94,7 @@
 <body style="color:black; background-color: var(--bg);">
 
     <section class="font-worksans flex flex-wrap justify-center" style="height:auto;margin-top: 20px;" id="minivans">
-    
+
         <div class="card ml-1" style="width: 18rem;">
             <img src="./static/tharbg.jpg" class="card-img-top" alt="Unable to load image">
             <div class="card-body">
@@ -187,30 +193,30 @@
                 <a href="#" class="btn-red" onclick="rentCar('transmission4','9000','4')">Rent Now</a>
             </div>
         </div>
-<div class="card ml-1" style="width: 18rem;">
-    <img src="./static/raneevo.jpg" class="card-img-top" alt="Unable to load image">
-    <div class="card-body">
-        <span class="badge rounded-pill bg-dark">Expensive</span>
-        <h4 class="card-title" id="5">Range Rover Evoque</h4>
-        <p class="card-text">some quick information about this car. <br>
-        <div class="grid grid-two-column">
-            <h4 style="font-weight: 400; font-size: 1rem">Price:
-            </h4>
-            <span class="badge rounded-pill bg-danger">9000/day</span>
-        </div>
-        <div class="grid grid-two-column mt-2">
-            <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission5">
-                <option value="Manual">Manual</option>
-                <option value="Automatic">Automatic</option>
-            </select>
-        </div>
-        </p>
+        <div class="card ml-1" style="width: 18rem;">
+            <img src="./static/raneevo.jpg" class="card-img-top" alt="Unable to load image">
+            <div class="card-body">
+                <span class="badge rounded-pill bg-dark">Expensive</span>
+                <h4 class="card-title" id="5">Range Rover Evoque</h4>
+                <p class="card-text">some quick information about this car. <br>
+                <div class="grid grid-two-column">
+                    <h4 style="font-weight: 400; font-size: 1rem">Price:
+                    </h4>
+                    <span class="badge rounded-pill bg-danger">9000/day</span>
+                </div>
+                <div class="grid grid-two-column mt-2">
+                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission5">
+                        <option value="Manual">Manual</option>
+                        <option value="Automatic">Automatic</option>
+                    </select>
+                </div>
+                </p>
 
-    </div>
-    <div class="card-footer" style="background:transparent; border-color: transparent;">
-        <a href="#" class="btn-red" onclick="rentCar('transmission5','9000','5')">Rent Now</a>
-    </div>
-</div>
+            </div>
+            <div class="card-footer" style="background:transparent; border-color: transparent;">
+                <a href="#" class="btn-red" onclick="rentCar('transmission5','9000','5')">Rent Now</a>
+            </div>
+        </div>
 
     </section>
     <!-- -------------linking javascript---------- -->

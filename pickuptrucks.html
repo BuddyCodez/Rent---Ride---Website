@@ -67,11 +67,17 @@
                     </li>
                     <li class="nav-item ">
                         <a class="border-none btn-blue mb-auto ml-1" id="login" href="login.html">Login</a>
-                    </li>&nbsp;&nbsp;
+                    </li>
                     <li class="nav-item ">
                         <a class="border-none btn-red mb-auto login" id="register" href="register.html">Register</a>
                     </li>
-                    <li><span id="mail" class="badge rounded-pill bg-primary">Primary</span></li>
+                    <li><button type="button" class="btn btn-primary position-relative" id="mail">
+                            Profile
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </button></li>
                     <li><button id="logout" class="border-none btn-red mb-auto mr-left"
                             onclick="logout();">Logout</button>
                     </li>
@@ -92,7 +98,7 @@
             <img src="./static/boleropickup.jpg" class="card-img-top" alt="unable to load images!">
             <div class="card-body">
                 <span class="badge rounded-pill bg-dark">Midrange</span>
-                <h4 class="card-title" id="c1"> Bolero  </h4>
+                <h4 class="card-title" id="c1"> Bolero </h4>
                 <p class="card-text">
                 <div class="grid grid-two-column">
                     <h4 style="font-weight: 400; font-size: 1rem">Price:
@@ -110,74 +116,74 @@
                 <button class="btn-red" onclick="rentCar('transmission','5500', 'c1')">Rent Now</button>
             </div>
         </div>
-     
-<div class="card" style="width: 18rem;">
-    <img src="./static/isuzupickup.jpg" class="card-img-top" alt="unable to load images!">
-    <div class="card-body">
-        <span class="badge rounded-pill bg-dark">Midrange</span>
-        <h4 class="card-title" id="2"> Isuzu D max </h4>
-        <p class="card-text">
-        <div class="grid grid-two-column">
-            <h4 style="font-weight: 400; font-size: 1rem">Price:
-            </h4>
-            <span class="badge rounded-pill bg-danger">5500/day</span>
-        </div>
-        <div class="grid grid-two-column mt-2">
-            <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission2">
-                <option value="Manual">Manual</option>
-            </select>
-        </div>
-        </p>
-    </div>
-    <div class="card-footer" style="background:transparent; border-color: transparent;">
-        <button class="btn-red" onclick="rentCar('transmission2','5500', '2')">Rent Now</button>
-    </div>
-</div>
 
-<div class="card" style="width: 18rem;">
-    <img src="./static/fordpickup.jpg" class="card-img-top" alt="unable to load images!">
-    <div class="card-body">
-        <span class="badge rounded-pill bg-dark">Expensive</span>
-        <h4 class="card-title" id="3">Ford F150 </h4>
-        <p class="card-text">
-        <div class="grid grid-two-column">
-            <h4 style="font-weight: 400; font-size: 1rem">Price:
-            </h4>
-            <span class="badge rounded-pill bg-danger">7000/day</span>
+        <div class="card" style="width: 18rem;">
+            <img src="./static/isuzupickup.jpg" class="card-img-top" alt="unable to load images!">
+            <div class="card-body">
+                <span class="badge rounded-pill bg-dark">Midrange</span>
+                <h4 class="card-title" id="2"> Isuzu D max </h4>
+                <p class="card-text">
+                <div class="grid grid-two-column">
+                    <h4 style="font-weight: 400; font-size: 1rem">Price:
+                    </h4>
+                    <span class="badge rounded-pill bg-danger">5500/day</span>
+                </div>
+                <div class="grid grid-two-column mt-2">
+                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission2">
+                        <option value="Manual">Manual</option>
+                    </select>
+                </div>
+                </p>
+            </div>
+            <div class="card-footer" style="background:transparent; border-color: transparent;">
+                <button class="btn-red" onclick="rentCar('transmission2','5500', '2')">Rent Now</button>
+            </div>
         </div>
-        <div class="grid grid-two-column mt-2">
-            <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission3">
-                <option value="Manual">Manual</option>
-            </select>
+
+        <div class="card" style="width: 18rem;">
+            <img src="./static/fordpickup.jpg" class="card-img-top" alt="unable to load images!">
+            <div class="card-body">
+                <span class="badge rounded-pill bg-dark">Expensive</span>
+                <h4 class="card-title" id="3">Ford F150 </h4>
+                <p class="card-text">
+                <div class="grid grid-two-column">
+                    <h4 style="font-weight: 400; font-size: 1rem">Price:
+                    </h4>
+                    <span class="badge rounded-pill bg-danger">7000/day</span>
+                </div>
+                <div class="grid grid-two-column mt-2">
+                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission3">
+                        <option value="Manual">Manual</option>
+                    </select>
+                </div>
+                </p>
+            </div>
+            <div class="card-footer" style="background:transparent; border-color: transparent;">
+                <button class="btn-red" onclick="rentCar('transmission3','7000', '3')">Rent Now</button>
+            </div>
         </div>
-        </p>
-    </div>
-    <div class="card-footer" style="background:transparent; border-color: transparent;">
-        <button class="btn-red" onclick="rentCar('transmission3','7000', '3')">Rent Now</button>
-    </div>
-</div>
-<div class="card" style="width: 18rem;">
-    <img src="./static/fordranger.jpg" class="card-img-top" alt="unable to load images!">
-    <div class="card-body">
-        <span class="badge rounded-pill bg-dark">Expensive</span>
-        <h4 class="card-title" id="4">Ford Ranger Raptor </h4>
-        <p class="card-text">
-        <div class="grid grid-two-column">
-            <h4 style="font-weight: 400; font-size: 1rem">Price:
-            </h4>
-            <span class="badge rounded-pill bg-danger">7000/day</span>
+        <div class="card" style="width: 18rem;">
+            <img src="./static/fordranger.jpg" class="card-img-top" alt="unable to load images!">
+            <div class="card-body">
+                <span class="badge rounded-pill bg-dark">Expensive</span>
+                <h4 class="card-title" id="4">Ford Ranger Raptor </h4>
+                <p class="card-text">
+                <div class="grid grid-two-column">
+                    <h4 style="font-weight: 400; font-size: 1rem">Price:
+                    </h4>
+                    <span class="badge rounded-pill bg-danger">7000/day</span>
+                </div>
+                <div class="grid grid-two-column mt-2">
+                    <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission4">
+                        <option value="Manual">Manual</option>
+                    </select>
+                </div>
+                </p>
+            </div>
+            <div class="card-footer" style="background:transparent; border-color: transparent;">
+                <button class="btn-red" onclick="rentCar('transmission4','7000', '4')">Rent Now</button>
+            </div>
         </div>
-        <div class="grid grid-two-column mt-2">
-            <h6>transmissiom:</h6><select style="margin-left: -80px;" name="transmission" id="transmission4">
-                <option value="Manual">Manual</option>
-            </select>
-        </div>
-        </p>
-    </div>
-    <div class="card-footer" style="background:transparent; border-color: transparent;">
-        <button class="btn-red" onclick="rentCar('transmission4','7000', '4')">Rent Now</button>
-    </div>
-</div>
 
     </section>
     <!-- -------------linking javascript---------- -->

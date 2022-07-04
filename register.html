@@ -66,11 +66,17 @@
                     </li>
                     <li class="nav-item ">
                         <a class="border-none btn-blue mb-auto ml-1" id="login" href="login.html">Login</a>
-                    </li>&nbsp;&nbsp;
+                    </li>
                     <li class="nav-item ">
                         <a class="border-none btn-red mb-auto login" id="register" href="register.html">Register</a>
                     </li>
-                    <li><span id="mail" class="badge rounded-pill bg-primary">Primary</span></li>
+                    <li><button type="button" class="btn btn-primary position-relative" id="mail">
+                            Profile
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </button></li>
                     <li><button id="logout" class="border-none btn-red mb-auto mr-left"
                             onclick="logout();">Logout</button>
                     </li>
@@ -97,11 +103,12 @@
                     </div>
                     <div class="field space">
                         <span class="fa fa-lock"></span>
-                        <input type="password" name="password" id="field2" required placeholder="Enter your password" class="pass-key">
+                        <input type="password" name="password" id="field2" required placeholder="Enter your password"
+                            class="pass-key">
                         <span class="show-btn" onclick="check()">SHOW</span>
                     </div>
                     <div class="field">
-                       <a  onclick="register()"> Register</a>
+                        <a onclick="register()"> Register</a>
                     </div>
                 </form>
             </div>
@@ -111,29 +118,29 @@
 
     <!-- -------------linking javascript---------- -->
     <script>
-function check(){
-          let pass_field = document.querySelector(".pass-key")
-    let show_btn = document.querySelector(".show-btn");
-        if (pass_field.type == "password") {
-            pass_field.type = "text";
-            show_btn.textContent = "HIDE";
-            show_btn.style.color = "var(--theme)";
-        } else {
-            pass_field.type = "password";
-            show_btn.textContent = "SHOW";
-            show_btn.style.color = "black"
+        function check() {
+            let pass_field = document.querySelector(".pass-key")
+            let show_btn = document.querySelector(".show-btn");
+            if (pass_field.type == "password") {
+                pass_field.type = "text";
+                show_btn.textContent = "HIDE";
+                show_btn.style.color = "var(--theme)";
+            } else {
+                pass_field.type = "password";
+                show_btn.textContent = "SHOW";
+                show_btn.style.color = "black"
+            }
         }
-}
         function register(e) {
 
-                let email = document.getElementById("field1").value;
-                let pass =  document.getElementById("field2").value;
-                if(!pass || !email) return alert("Please Enter Email and Password to Continue.")
-                sessionStorage.setItem(email, pass);
-                sessionStorage.setItem('logged', email);
-                window.location.href = "index.html";
-                console.log("Redirected.")
-    
+            let email = document.getElementById("field1").value;
+            let pass = document.getElementById("field2").value;
+            if (!pass || !email) return alert("Please Enter Email and Password to Continue.")
+            localStorage.setItem(email, pass);
+            localStorage.setItem('logged', email);
+            window.location.href = "index.html";
+            console.log("Redirected.")
+
         }
 
         const form = document.getElementById("register");
@@ -189,66 +196,72 @@ function check(){
         font-family: "Josefin Sans", sans-serif;
 
     }
-    .field{
+
+    .field {
         position: relative;
         height: 45px;
         width: 100%;
         display: flex;
         background: rgba(255, 255, 255, 0.94);
     }
-    .field span{
+
+    .field span {
         color: #222;
         width: 40px;
         line-height: 45px;
     }
-    .field input, .field a{
+
+    .field input,
+    .field a {
         height: 100%;
         width: 100%;
         background: transparent;
-        border:none;
+        border: none;
         outline: none;
         color: #222;
         text-decoration: none;
         text-align: center;
         font-size: 16px;
-         font-family: "Josefin Sans", sans-serif;
+        font-family: "Josefin Sans", sans-serif;
     }
 
-    .space{
-        margin-top:20px;
+    .space {
+        margin-top: 20px;
     }
 
-    .show-btn{
-        position:absolute;
+    .show-btn {
+        position: absolute;
         right: 13px;
         font-size: 13px;
         font-weight: 700;
         cursor: pointer;
-         font-family: "Poppins", sans-serif;
+        font-family: "Poppins", sans-serif;
     }
-    .field a{
+
+    .field a {
         background: var(--theme);
         border: 1px solid #a70000;
-        color:white;
+        color: white;
         text-align: center;
         letter-spacing: 1px;
         font-size: x-large;
         font-weight: 600;
         cursor: pointer;
-         font-family: "Josefin Sans", sans-serif;
-         transition: all 0.5s ease;
+        font-family: "Josefin Sans", sans-serif;
+        transition: all 0.5s ease;
     }
-    .field a:hover{
+
+    .field a:hover {
         background: #e40d0df5;
     }
-    span{
+
+    span {
         margin-left: 8px;
         font-weight: 800;
         letter-spacing: 1px;
-        font-size:16px;
+        font-size: 16px;
         font-family: "Poppins", sans-serif;
     }
-
 </style>
 
 </html>

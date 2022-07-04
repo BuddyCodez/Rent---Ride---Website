@@ -4,6 +4,7 @@ body {
 
 nav {
   transition: all ease-in-out 0.5s;
+   font-family: "Josefin Sans", sans-serif;
 }
 .nav-head {
   margin: 0 12px;
@@ -21,14 +22,13 @@ nav {
 }
 
 .nav-head {
-  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
 }
 
 /*Color of the login button */
 li {
-  font-family: "Josefin Sans", sans-serif;
+ 
   padding-top: 10px;
 }
 

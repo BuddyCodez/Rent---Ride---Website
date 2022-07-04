@@ -1,5 +1,5 @@
 function checklogin(toast) {
-  let logged = sessionStorage.getItem("logged");
+  let logged = localStorage.getItem("logged");
 console.log("checking login..........")
   let element = document.getElementById("mail");
   let button1 = document.getElementById("login");
@@ -19,7 +19,12 @@ console.log("checking login..........")
 
     button1.style = "display: none;";
     button2.style = "display: none;";
-    element.innerHTML = "Email:" + logged;
+    element.innerHTML =
+      "Email:" +
+      logged +
+      ` <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+    <span class="visually-hidden">New alerts</span>
+  </span>`;
     element.style = "display: block;";
     logoutbtn.style = "display: block;";
   } else {

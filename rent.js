@@ -5,10 +5,10 @@ function rentCar(selectid, price,name) {
     let cartitle = document.getElementById(name)
     let carimg = cartitle.parentElement.parentElement.children[0].src;
     let image = `./static/${carimg.split("/static/")[1]}`;
-    sessionStorage.setItem("vehicle_name", cartitle.textContent);
-    sessionStorage.setItem("vehicle_price", price);
-    sessionStorage.setItem("vehicle_options", value);
-    sessionStorage.setItem("vehicle_img", image);
+    localStorage.setItem("vehicle_name", cartitle.textContent);
+    localStorage.setItem("vehicle_price", price);
+    localStorage.setItem("vehicle_options", value);
+    localStorage.setItem("vehicle_img", image);
 
 window.location.assign("paymentgateway.html");
 }

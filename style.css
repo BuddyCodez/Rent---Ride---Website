@@ -22,7 +22,7 @@ a:focus {
 a {
   text-decoration: none;
 }
-body{
+body {
   color: var(--bg);
   height: auto;
   width: 100vw;
@@ -51,11 +51,11 @@ body{
 .intro p {
   font-size: 1rem;
 }
-.cars-2{
-   margin-top: 15px;
+.cars-2 {
+  margin-top: 15px;
 }
-.cars-3{
-   margin-top: 15px;
+.cars-3 {
+  margin-top: 15px;
 }
 .cars {
   margin-top: 15px;
@@ -70,8 +70,8 @@ body{
   background: var(--truck);
 }
 .container .truck.card:after {
- content: "Pickup Trucks";
-   top: 50%;
+  content: "Pickup Trucks";
+  top: 50%;
   left: 10%;
   font-size: 2.5em;
 }
@@ -85,8 +85,8 @@ body{
 }
 
 .container .bus.card:after {
- content: "Bus";
-   top: 40%;
+  content: "Bus";
+  top: 40%;
   left: 25%;
   font-size: 6em;
 }
@@ -100,8 +100,8 @@ body{
 }
 
 .container .two.card:after {
- content: "Two Wheeler";
-   top: 50%;
+  content: "Two Wheeler";
+  top: 50%;
   left: 10%;
   font-size: 2.5em;
 }
@@ -115,8 +115,8 @@ body{
 }
 
 .container .minibus.card:after {
- content: "Mini Bus";
-   top: 50%;
+  content: "Mini Bus";
+  top: 50%;
   left: 20%;
   font-size: 3em;
 }
@@ -130,8 +130,8 @@ body{
 }
 
 .container .offroad.card:after {
- content: "Offroad";
-   top: 50%;
+  content: "Offroad";
+  top: 50%;
   left: 20%;
   font-size: 3em;
 }
@@ -145,8 +145,8 @@ body{
 }
 
 .container .hatchback.card:after {
- content: "Hatchbacks";
-   top: 50%;
+  content: "Hatchbacks";
+  top: 50%;
   left: 8%;
   font-size: 3em;
 }
@@ -159,14 +159,14 @@ body{
   color: var(--bg);
 }
 .container .vans.card:after {
- content: "Mini Vans";
-   top: 50%;
+  content: "Mini Vans";
+  top: 50%;
   left: 15%;
   font-size: 3em;
 }
 .container .fortuner.card:after {
- content: "SUV";
-   top: 40%;
+  content: "SUV";
+  top: 40%;
   left: 25%;
 }
 .container .fortuner.card:before {
@@ -180,32 +180,21 @@ body{
   background: #dc2c50;
 }
 
-
-
-
-.card{
+.card {
   margin-top: 40px;
   margin: 30px;
 }
 
-/* ########################## Card Payment Gateway ############# */
- 
-
-@keyframes hue {
-  from{
-    filter: hue-rotate(0deg);
-  }
-  to {
-    filter: hue-rotate(360deg);
-  }
+section {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
 }
 
-/* END */
-/* ============================ end ======================== */
-#mail{
+#mail {
   display: none;
 }
-#logout{display:none;
+#logout {
+  display: none;
 }
 .bottom {
   display: flex;
@@ -215,11 +204,12 @@ body{
   bottom: -70;
 }
 @media (max-width: 992px) {
-    .container .card{
+  .container .card {
     margin-top: 15px;
   }
-  .cars,.cars-2,.cars-3{
+  .cars,
+  .cars-2,
+  .cars-3 {
     flex-direction: column;
   }
-
 }

@@ -67,11 +67,17 @@
                     </li>
                     <li class="nav-item ">
                         <a class="border-none btn-blue mb-auto ml-1" id="login" href="login.html">Login</a>
-                    </li>&nbsp;&nbsp;
+                    </li>
                     <li class="nav-item ">
                         <a class="border-none btn-red mb-auto login" id="register" href="register.html">Register</a>
                     </li>
-                    <li><span id="mail" class="badge rounded-pill bg-primary">Primary</span></li>
+                    <li><button type="button" class="btn btn-primary position-relative" id="mail">
+                            Profile
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </button></li>
                     <li><button id="logout" class="border-none btn-red mb-auto mr-left"
                             onclick="logout();">Logout</button>
                     </li>

@@ -67,11 +67,17 @@
                     </li>
                     <li class="nav-item ">
                         <a class="border-none btn-blue mb-auto ml-1" id="login" href="login.html">Login</a>
-                    </li>&nbsp;&nbsp;
+                    </li>
                     <li class="nav-item ">
                         <a class="border-none btn-red mb-auto login" id="register" href="register.html">Register</a>
                     </li>
-                    <li><span id="mail" class="badge rounded-pill bg-primary">Primary</span></li>
+                    <li><button type="button" class="btn btn-primary position-relative" id="mail">
+                            Profile
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </button></li>
                     <li><button id="logout" class="border-none btn-red mb-auto mr-left"
                             onclick="logout();">Logout</button>
                     </li>
@@ -86,31 +92,31 @@
 </head>
 
 <body>
-<div class="register font-sans clr-bg">
-    <div class="background">
-        <div class="content">
-            <header>Login Account</header>
-            <p>We'll never share your details with anyone else</p>
-            <form id="register">
-                <div class="field">
-                    <span class="fa fa-user"></span>
-                    <input type="email" name="email" id="field1" required placeholder="Enter Your Email Id">
-                </div>
-                <div class="field space">
-                    <span class="fa fa-lock"></span>
-                    <input type="password" name="password" id="field2" required placeholder="Enter your password"
-                        class="pass-key">
-                    <span class="show-btn" onclick="check()">show-btn</span>
-                </div>
-                <div class="field">
-                    <a onclick="login()" class="login">Login</a>
-                </div>
-            </form>
-           
+    <div class="register font-sans clr-bg">
+        <div class="background">
+            <div class="content">
+                <header>Login Account</header>
+                <p>We'll never share your details with anyone else</p>
+                <form id="register">
+                    <div class="field">
+                        <span class="fa fa-user"></span>
+                        <input type="email" name="email" id="field1" required placeholder="Enter Your Email Id">
+                    </div>
+                    <div class="field space">
+                        <span class="fa fa-lock"></span>
+                        <input type="password" name="password" id="field2" required placeholder="Enter your password"
+                            class="pass-key">
+                        <span class="show-btn" onclick="check()">show-btn</span>
+                    </div>
+                    <div class="field">
+                        <a onclick="login()" class="login">Login</a>
+                    </div>
+                </form>
+
+            </div>
         </div>
+
     </div>
-    
-</div>
     <!-- -------------linking javascript---------- -->
     <script>
         const form = document.getElementById("login");;
@@ -118,11 +124,11 @@
                      let email = document.getElementById("field1").value;
             let pass = document.getElementById("field2").value;
                 // formdata gets modified by the formdata event
-                let authenticate = sessionStorage.getItem(email);
+                let authenticate = localStorage.getItem(email);
                 if (authenticate) {
                     if(authenticate === pass ){
                     console.log("user logged in")
-                    sessionStorage.setItem('logged', email);
+                    localStorage.setItem('logged', email);
                     window.location.href = "index.html";
                     
                     } else{
@@ -141,120 +147,120 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-        <style>
-            .background {
-                background-image: url("./static/background-cover.jpg");
-                height: 92.5vh;
-                background-size: cover;
-                background-position: center;
-            }
-        
-            .background::after {
-                position: absolute;
-                content: "";
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                width: 100vw;
-                height: 100vh;
-                background-repeat: no-repeat;
-                background: rgba(255, 255, 255, 0.200);
-            }
-        
-            .content {
-                border-radius: 20px;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                z-index: 999;
-                text-align: center;
-                padding: 60px 32px;
-                width: 370px;
-                transform: translate(-50%, -50%);
-                background: rgba(255, 255, 255, 0.133);
-                border: 1px solid #fff;
-                backdrop-filter: blur(3px);
-                box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.203);
-                color: black;
-            }
-        
-            .content header {
-                color: black;
-                font-size: 30px;
-                font-weight: bold;
-                margin: 0 0 35px 0;
-                font-family: "Josefin Sans", sans-serif;
-        
-            }
-        
-            .field {
-                position: relative;
-                height: 45px;
-                width: 100%;
-                display: flex;
-                background: rgba(255, 255, 255, 0.94);
-            }
-        
-            .field span {
-                color: #222;
-                width: 40px;
-                line-height: 45px;
-            }
-        
-            .field input,
-            .field a {
-                height: 100%;
-                width: 100%;
-                background: transparent;
-                border: none;
-                outline: none;
-                color: #222;
-                text-decoration: none;
-                text-align: center;
-                font-size: 16px;
-                font-family: "Josefin Sans", sans-serif;
-            }
-        
-            .space {
-                margin-top: 20px;
-            }
-        
-        
-            .show-btn {
-                position: absolute;
-                right: 13px;
-                font-size: 13px;
-                font-weight: 700;
-                cursor: pointer;
-                font-family: "Poppins", sans-serif;
-            }
-        
-            .field a {
-                background: var(--theme);
-                border: 1px solid #a70000;
-                color: white;
-                text-align: center;
-                letter-spacing: 1px;
-                font-size: x-large;
-                font-weight: 600;
-                cursor: pointer;
-                font-family: "Josefin Sans", sans-serif;
-                transition: all 0.5s ease;
-            }
-        
-            .field a:hover {
-                background: #e40d0df5;
-            }
-        
-            span {
-                margin-left: 5px;
-                font-weight: 800;
-                letter-spacing: 1px;
-                font-size: 16px;
-                font-family: "Poppins", sans-serif;
-            }
-        </style>
+    <style>
+        .background {
+            background-image: url("./static/background-cover.jpg");
+            height: 92.5vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .background::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background: rgba(255, 255, 255, 0.200);
+        }
+
+        .content {
+            border-radius: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 999;
+            text-align: center;
+            padding: 60px 32px;
+            width: 370px;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.133);
+            border: 1px solid #fff;
+            backdrop-filter: blur(3px);
+            box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.203);
+            color: black;
+        }
+
+        .content header {
+            color: black;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 0 0 35px 0;
+            font-family: "Josefin Sans", sans-serif;
+
+        }
+
+        .field {
+            position: relative;
+            height: 45px;
+            width: 100%;
+            display: flex;
+            background: rgba(255, 255, 255, 0.94);
+        }
+
+        .field span {
+            color: #222;
+            width: 40px;
+            line-height: 45px;
+        }
+
+        .field input,
+        .field a {
+            height: 100%;
+            width: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #222;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+            font-family: "Josefin Sans", sans-serif;
+        }
+
+        .space {
+            margin-top: 20px;
+        }
+
+
+        .show-btn {
+            position: absolute;
+            right: 13px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .field a {
+            background: var(--theme);
+            border: 1px solid #a70000;
+            color: white;
+            text-align: center;
+            letter-spacing: 1px;
+            font-size: x-large;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: "Josefin Sans", sans-serif;
+            transition: all 0.5s ease;
+        }
+
+        .field a:hover {
+            background: #e40d0df5;
+        }
+
+        span {
+            margin-left: 5px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            font-size: 16px;
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
 </body>
 
 </html>

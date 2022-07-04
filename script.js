@@ -30,8 +30,7 @@ function logout() {
   let logoutbtn = document.getElementById("logout");
   let button1 = document.getElementById("login");
   let button2 = document.getElementById("register");
-  sessionStorage.removeItem("logged");
-  console.log("logged out");
+  localStorage.removeItem("logged");
 
   element.style = "display: none;";
   logoutbtn.style = "display: none;";
@@ -49,7 +48,6 @@ function changeimg(
   defaultclr,
   clrelement
 ) {
-  console.log("Changing image in every 5 secs.");
   let element = document.getElementById(el);
   setInterval(() => {
     if (element.classList.contains(myclass)) {

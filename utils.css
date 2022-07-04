@@ -322,3 +322,16 @@ color: var(--bg);
   transform: translateY(0px);
   transition-delay: 0.75s;
 }
+.container .card:hover a:hover{
+  transition: all 0.1s linear;
+  background-color: rgb(199, 199, 199);
+  transform: scale(0.90);
+  -webkit-transform: scale(0.90);
+  -moz-transform: scale(0.90);
+  -ms-transform: scale(0.90);
+  -o-transform: scale(0.90);
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+}
