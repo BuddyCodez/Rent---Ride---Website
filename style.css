@@ -62,122 +62,122 @@ body {
 }
 /*========================= cars card section ============== */
 
-.container .card .contentBx .truck.size span:hover {
+ .card .img-overlay .truck.size span:hover {
   background: #b14605;
   color: #000000;
 }
-.container .truck.card:before {
+ .truck.card:before {
   background: var(--truck);
 }
-.container .truck.card:after {
+ .truck.card:after {
   content: "Pickup Trucks";
-  top: 50%;
+  top: 60%;
   left: 10%;
   font-size: 2.5em;
 }
 
-.container .card .contentBx .bus.size span:hover {
+ .card .img-overlay .bus.size span:hover {
   background: #c0aa86;
   color: #000000;
 }
-.container .bus.card:before {
+ .bus.card:before {
   background: var(--bus);
 }
 
-.container .bus.card:after {
+ .bus.card:after {
   content: "Bus";
   top: 40%;
   left: 25%;
   font-size: 6em;
 }
 
-.container .card .contentBx .two.size span:hover {
+ .card .img-overlay .two.size span:hover {
   background: #000000;
   color: #ffffff;
 }
-.container .two.card:before {
+ .two.card:before {
   background: var(--bike);
 }
 
-.container .two.card:after {
+ .two.card:after {
   content: "Two Wheeler";
-  top: 50%;
+  top: 60%;
   left: 10%;
   font-size: 2.5em;
 }
 
-.container .card .contentBx .minibus.size span:hover {
+ .card .img-overlay .minibus.size span:hover {
   background: #000000;
   color: #cbcbcb;
 }
-.container .minibus.card:before {
+ .minibus.card:before {
   background: #cbcbcb;
 }
 
-.container .minibus.card:after {
+ .minibus.card:after {
   content: "Mini Bus";
-  top: 50%;
+  top: 60%;
   left: 20%;
   font-size: 3em;
 }
 
-.container .card .contentBx .offroad.size span:hover {
+ .card .img-overlay .offroad.size span:hover {
   background: #699abf;
   color: black;
 }
-.container .offroad.card:before {
+ .offroad.card:before {
   background: #699abf;
 }
 
-.container .offroad.card:after {
+ .offroad.card:after {
   content: "Offroad";
-  top: 50%;
+  top: 60%;
   left: 20%;
   font-size: 3em;
 }
 
-.container .card .contentBx .hatchback.size span:hover {
+ .card .img-overlay .hatchback.size span:hover {
   background: yellow;
   color: black;
 }
-.container .hatchback.card:before {
+ .hatchback.card:before {
   background: yellow;
 }
 
-.container .hatchback.card:after {
+ .hatchback.card:after {
   content: "Hatchbacks";
-  top: 50%;
+  top: 60%;
   left: 8%;
   font-size: 3em;
 }
 
-.container .vans.card:before {
+ .vans.card:before {
   background: #686a6f;
 }
-.container .card .contentBx .size.vans span:hover {
+ .card .img-overlay .size.vans span:hover {
   background: #686a6f;
   color: var(--bg);
 }
-.container .vans.card:after {
+ .vans.card:after {
   content: "Mini Vans";
-  top: 50%;
+  top: 60%;
   left: 15%;
   font-size: 3em;
 }
-.container .fortuner.card:after {
+ .fortuner.card:after {
   content: "SUV";
-  top: 40%;
-  left: 25%;
-}
-.container .fortuner.card:before {
+  top: 60%;
+  left: 35%;
+} 
+.fortuner.card:before {
   background: #4c3935;
 }
-.container .card .contentBx .size.fortuner span:hover {
+ .card .img-overlay .size.fortuner span:hover {
   background: #4c3935;
   color: var(--bg);
 }
-.container .card .contentBx .size span:hover {
-  background: #dc2c50;
+ .card .img-overlay  span:hover {
+  background: #dc2c60;
 }
 
 .card {
@@ -204,7 +204,7 @@ section {
   bottom: -70;
 }
 @media (max-width: 992px) {
-  .container .card {
+   .card {
     margin-top: 15px;
   }
   .cars,

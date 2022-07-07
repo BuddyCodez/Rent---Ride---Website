@@ -1,0 +1,224 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<section>
+<h1>--bootstap cards --</h1>
+<div class="card-warp">
+<div class="card bg-dark text-white">
+    <div class="img-wrap">
+        <img src="./static/ford.png" class="card-img" alt="...">
+    </div>
+   <div class="card-img-overlay">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text"
+        ><div class="size">
+            <h3>Segment Options:</h3>
+            <span>Cheap</span>
+            <span>Midrange</span>
+            <span>Expensive</span>
+        
+        </div>
+        <div class="size">
+            <h3>Transmission:</h3>
+            <span>Manual</span>
+            <span>Automatic</span>
+        
+        </div>
+        <br>
+        <a href="#">Show More</a></p>
+    </div>
+</div>
+</div>
+</section>
+
+<style>
+    section{
+        width: 100%;
+        height: 100vh;
+    }
+
+</style>
+
+
+
+<div class="container">
+    <div class="card">
+        <div class="imgBx">
+            <img id="syden" src="./static/car.png" alt="image">
+        </div>
+        <div class="contentBx">
+            <h2>Sedans</h2>
+            <div class="size">
+                <h3>Segment Options:</h3>
+                <span>Cheap</span>
+                <span>Midrange</span>
+                <span>Expensive</span>
+
+            </div>
+            <div class="size">
+                <h3>Transmission:</h3>
+                <span>Manual</span>
+                <span>Automatic</span>
+
+            </div>
+            <br>
+            <a href="#">Show More</a>
+        </div>
+    </div>
+</div>
+<style>
+    .container {
+        position: relative;
+        margin: 12px;
+    }
+    .container .card {
+        position: relative;
+        width: 325px;
+        height: 425px;
+        background-color: #515151;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .container .card::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgb(223, 59, 86);
+        clip-path: circle(200px at 80% 20%);
+        transition: 0.5s ease-in-out;
+
+    }
+    .container .card:hover::before {
+ clip-path: circle(300px at 80% 20%);
+}
+.container .card::after {
+  position:absolute;
+  top: 50%;
+  left: 17%;
+  content: "Card Name";
+   font-size: 3em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.05);
+}
+.container .imgBx{
+    position: absolute;
+     transform: translateY(-50%);
+    top: 50%;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    z-index: 1;
+    visibility: visible;
+    transition: 0.5s;
+
+}
+.container .card:hover .imgBx{
+    top: 0;
+    transform: translateY(0%);
+}
+.container .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)  rotate(-10deg);
+    width: 270px; 
+}
+
+.container .card .contentBx{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+     transition: 0.5s ease-in-out;
+    z-index: 1;
+}
+.container .card:hover .contentBx{
+     
+    height: 220px;
+}
+.container .card .contentBx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    color: white;
+}
+.container .card .contentBx  .size,
+.container .card .contentBx .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.container .card:hover .contentBx .size {
+opacity: 1;
+visibility: visible;
+transition-delay: 0.5s;
+}
+.container .card:hover .contentBx .color {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+.container .card .contentBx .size h3,
+.container .card .contentBx .color h3 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+.container .card span {
+    background: white;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 11px;
+    margin: 0 5px;
+width: 100px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.container .card span:hover {
+    background-color:gray;
+}
+.container .card a {
+    display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+  margin-top: 0;
+}
+.container .card:hover .contentBx a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.1s;
+}
+.container a:hover {
+     transition: all 0.2s linear;
+transform: scale(2);
+background-color: gray;
+
+}
+</style>

@@ -4,6 +4,7 @@
     <title>Rent & Ride</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="card.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -95,13 +96,15 @@
     <section class="rent bg-white" style="background-color:var(--bg)">
         <h1 style="font-size: 2.5rem;">Car Segments</h1>
         <div class="cars flex justify-center">
-            <div class="container">
-                <div class="card">
-                    <div class="imgBx">
-                        <img id="syden" src="./static/syden.png">
+            <div class="card-warp">
+                <div class="card bg-dark text-white" style="        border-radius: 14px;
+        border: 2px solid black;">
+                    <div class="img-wrap">
+                        <img id="syden" src="./static/syden.png" class="card-img" alt="...">
                     </div>
-                    <div class="contentBx">
-                        <h2>Sedans</h2>
+                    <div class="card-overlay">
+                        <h5 class="card-title">Sydens</h5>
+                        <p class="card-text">
                         <div class="size">
                             <h3>Segment Options:</h3>
                             <span>Cheap</span>
@@ -116,17 +119,19 @@
 
                         </div>
                         <br>
-                        <a href="sydens.html">Show More</a>
+                        <a href="sydens.html">Show More</a></p>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="fortuner card">
-                    <div class="imgBx">
-                        <img id="suv" src="./static/fortuner.png">
+            <div class="card-warp">
+                <div class="fortuner card bg-dark text-white" style="        border-radius: 14px;
+                    border: 2px solid black;">
+                    <div class="img-wrap">
+                        <img id="suv" src="./static/syden.png" class="card-img" alt="...">
                     </div>
-                    <div class="contentBx">
-                        <h2>SUV</h2>
+                    <div class="card-overlay">
+                        <h5 class="card-title">SUv</h5>
+                        <p class="card-text">
                         <div class="size fortuner">
                             <h3>Segment Options:</h3>
                             <span>Cheap</span>
@@ -141,17 +146,19 @@
 
                         </div>
                         <br>
-                        <a href="suv.html">Show More</a>
+                        <a href="suv.html">Show More</a></p>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="vans card">
-                    <div class="imgBx">
-                        <img id="van" src="./static/vans.png">
+            <div class="card-warp">
+                <div class="vans card bg-dark text-white" style="        border-radius: 14px;
+            border: 2px solid black;">
+                    <div class="img-wrap">
+                        <img id="van" src="./static/vans.png" class="card-img" alt="...">
                     </div>
-                    <div class="contentBx">
-                        <h2>Mini Vans</h2>
+                    <div class="card-overlay">
+                        <h5 class="card-title">Mini vans</h5>
+                        <p class="card-text">
                         <div class="size vans">
                             <h3>Segment Options:</h3>
                             <span>Cheap</span>
@@ -166,20 +173,22 @@
 
                         </div>
                         <br>
-                        <a href="minivan.html">Show More</a>
+                        <a href="minivan.html">Show More</a></p>
                     </div>
                 </div>
             </div>
-        </div>
+
         </div>
         <div class="cars-2 flex justify-center">
-            <div class="container">
-                <div class="hatchback card">
-                    <div class="imgBx">
-                        <img id="hatchbacks" src="./static/swift.png">
+            <div class="card-warp">
+                <div class="hatchback card bg-dark text-white" style="        border-radius: 14px;
+                        border: 2px solid black;">
+                    <div class="img-wrap">
+                        <img id="hatchbacks" src="./static/swift.png" class="card-img" alt="...">
                     </div>
-                    <div class="contentBx">
-                        <h2>Hatchbacks</h2>
+                    <div class="card-overlay">
+                        <h5 class="card-title">Hatchbacks</h5>
+                        <p class="card-text">
                         <div class="hatchback size">
                             <h3>Segment Options:</h3>
                             <span>Cheap</span>
@@ -194,19 +203,22 @@
 
                         </div>
                         <br>
-                        <a href="hatchbacks.html">Show More</a>
+                        <a href="hatchbacks.html">Show More</a></p>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="offroad card">
-                    <div class="imgBx">
-                        <img id="offroad" src="./static/jeep.png">
+            <div class="card-warp">
+                <div class="offroad card bg-dark text-white" style="        border-radius: 14px;
+                                        border: 2px solid black;">
+                    <div class="img-wrap">
+                        <img id="offroad" src="./static/jeep.png" alt="image">
                     </div>
-                    <div class="contentBx">
-                        <h2>Offroad</h2>
+                    <div class="card-overlay">
+                        <h5 class="card-title">Offroad</h5>
+                        <p class="card-text">
                         <div class="offroad size">
                             <h3>Segment Options:</h3>
+                            <span>Cheap</span>
                             <span>Midrange</span>
                             <span>Expensive</span>
 
@@ -218,21 +230,25 @@
 
                         </div>
                         <br>
-                        <a href="offroad.html">Show More</a>
+                        <a href="offroad.html">Show More</a></p>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="minibus card">
-                    <div class="imgBx">
-                        <img id="minibus" src="./static/minibus.png">
+
+            <div class="card-warp">
+                <div class="minibus card bg-dark text-white" style="        border-radius: 14px;
+                                                        border: 2px solid black;">
+                    <div class="img-wrap">
+                        <img id="minibus" src="./static/minibus.png" alt="image">
                     </div>
-                    <div class="contentBx">
-                        <h2>Mini Bus</h2>
+                    <div class="card-overlay">
+                        <h5 class="card-title">Mini Bus</h5>
+                        <p class="card-text">
                         <div class="minibus size">
                             <h3>Segment Options:</h3>
+                            <span>Cheap</span>
                             <span>Midrange</span>
-
+                            <span>Expensive</span>
 
                         </div>
                         <div class="minibus size">
@@ -242,125 +258,131 @@
 
                         </div>
                         <br>
-                        <a href="minibus.html">Show More</a>
+                        <a href="minibus.html">Show More</a></p>
                     </div>
                 </div>
             </div>
+
+
         </div>
     </section>
     <section class="rent bg-white">
         <div class="cars-3 flex justify-center">
-            <div class="container">
-                <div class="two card" id="twowheeler">
-                    <div class="imgBx">
-                        <img id="wheel" src="./static/cbr.png">
-                    </div>
-                    <div class="contentBx">
-                        <h2>Two Wheeler</h2>
-                        <div class="two size">
-                            <h3>Segment Options:</h3>
-                            <span>Midrange</span>
-                            <span>Expensive</span>
+            <div class="two card bg-dark text-white" id="twowheeler" style="border-radius: 14px;
+                                                                        border: 2px solid black;">
+                <div class="img-wrap">
+                    <img id="wheel" src="./static/cbr.png" alt="image">
+                </div>
+                <div class="card-overlay">
+                    <h5 class="card-title">Two Wheeler</h5>
+                    <p class="card-text">
+                    <div class="two size">
+                        <h3>Segment Options:</h3>
+                        <span>Midrange</span>
+                        <span>Expensive</span>
 
-                        </div>
-                        <div class="two size">
-                            <h3>type:</h3>
-                            <span>Scooties</span>
-                            <span>Bikes</span>
-
-                        </div>
-                        <br>
-                        <a href="twowheeler.html">Show More</a>
                     </div>
+                    <div class="two size">
+                        <h3>type:</h3>
+                        <span>Scooties</span>
+                        <span>Bikes</span>
+
+                    </div>
+                    <br>
+                    <a href="twowheeler.html">Show More</a></p>
                 </div>
             </div>
-            <div class="container">
-                <div class="bus card" id="buscard">
-                    <div class="imgBx">
-                        <img id="bus" src="./static/bus.png">
-                    </div>
-                    <div class="contentBx">
-                        <h2>Bus</h2>
-                        <div class="bus size">
-                            <h3>Segment Options:</h3>
-                            <span>Midrange</span>
-                            <span>Expensive</span>
+            <div class="bus card bg-dark text-white" id="buscard" style="border-radius: 14px;
+                                                                                    border: 2px solid black;">
+                <div class="img-wrap">
+                    <img id="bus" src="./static/bus.png" alt="image">
+                </div>
+                <div class="card-overlay">
+                    <h5 class="card-title">Bus</h5>
+                    <p class="card-text">
+                    <div class="bus size">
+                        <h3>Segment Options:</h3>
+                        <span>Midrange</span>
+                        <span>Expensive</span>
 
-                        </div>
-                        <div class="bus size">
-                            <h3>Seats:</h3>
-                            <span>75</span>
-                            <span>100</span>
-
-                        </div>
-                        <br>
-                        <a href="bus.html">Show More</a>
                     </div>
+                    <div class="bus size">
+                        <h3>Seats:</h3>
+                        <span>75</span>
+                        <span>100</span>
+
+                    </div>
+                    <br>
+                    <a href="bus.html">Show More</a></p>
                 </div>
             </div>
-            <div class="container">
-                <div class="truck card" id="card">
-                    <div class="imgBx">
-                        <img id="pickuptruck" src="./static/truck.png">
-                    </div>
-                    <div class="contentBx">
-                        <h2>Pickup Trucks</h2>
-                        <div class="truck size">
-                            <h3>Segment Options:</h3>
-                            <span>Midrange</span>
-                            <span>Expensive</span>
-
-                        </div>
-                        <div class="truck size">
-                            <h3>Transmission:</h3>
-                            <span>Automatic</span>
-                            <span>Manual</span>
-
-                        </div>
-                        <br>
-                        <a href="pickuptrucks.html">Show More</a>
-                    </div>
+            <div class="truck card bg-dark text-white" id="card" style="border-radius: 14px;
+                                                                                        border: 2px solid black;">
+                <div class="img-wrap">
+                    <img id="pickuptruck" src="./static/truck.png" alt="image">
                 </div>
+                <div class="card-overlay">
+                    <h5 class="card-title">Pickup Trucks</h5>
+                    <p class="card-text">
+                    <div class="truck size">
+                        <h3>Segment Options:</h3>
+                        <span>Midrange</span>
+                        <span>Expensive</span>
+
+                    </div>
+                    <div class="truck size">
+                        <h3>Transmission:</h3>
+                        <span>Automatic</span>
+                        <span>Manual</span>
+
+                    </div>
+                    <br>
+                    <a href="pickuptrucks.html">Show More</a></p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    </section>
+    <div id="AboutUs" class="intro w-100 flex flex-colum align-center font-poppins">
+        <h1 style="font-weight: 800;font-size: 2.5rem;">About Us</h1>
+        <p style="font-family: Work Sans, sans-serif; font-size: 1rem;">Rent & Ride is vehicel rental service. we
+            provide vehicle on rent in
+            your City. we have the best vehcile for your needs.</p>
+        <a id="readbtn" class="collapsed" style="text-decoration: none; color: var(--theme);" data-bs-toggle="collapse"
+            href="#description" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Read More &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+            </svg>
+        </a>
+        <div class="collapse" id="description">
+            <div class="card card-body" style="border: transparent;">
+                <p font-family: Work Sans, sans-serif;"> <b>Our fleet:</b><br>
+                    Depending on your preference and need you could choose among sedans, hatchbacks, and SUVs. From
+                    comfort cars to
+                    luxurious varieties, our fleet is impeccably maintained. They are cleaned and serviced regularly
+                    thus giving trouble
+                    free service. Self drive cars in Goa of sedan variety is demanded most. They are comfortable,
+                    aesthetically designed,
+                    and ideal for journeying across the length and breadth of the state with a family of 5-7
+                    members. Self drive car rental
+                    Goa for SUVs is perfect for groups that love to be adventurous in the hilly tracks and coasts of
+                    this state. Tourists
+                    that have a passion for offbeat routes and destinations might opt for these heavier vehicles.
+                    Even when you are on an
+                    official visit it is possible to rent a car without drier in Goa. Luxury sedans from Audi and
+                    BMW are there for your
+                    taking.
+                </p>
             </div>
         </div>
-        <div id="AboutUs" class="intro flex flex-colum align-center font-poppins">
-            <h1 style="font-weight: 800;font-size: 2.5rem;">About Us</h1>
-            <p style="font-family: Work Sans, sans-serif; font-size: 1rem;">Rent & Ride is vehicel rental service. we
-                provide vehicle on rent in
-                your City. we have the best vehcile for your needs.</p>
-            <a id="readbtn" class="collapsed" style="text-decoration: none; color: var(--theme);"
-                data-bs-toggle="collapse" href="#description" role="button" aria-expanded="false"
-                aria-controls="collapseExample">
-                Read More &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-chevron-down" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </a>
-            <div class="collapse" id="description">
-                <div class="card card-body" style="border: transparent;">
-                    <p font-family: Work Sans, sans-serif;"> <b>Our fleet:</b><br>
-                        Depending on your preference and need you could choose among sedans, hatchbacks, and SUVs. From
-                        comfort cars to
-                        luxurious varieties, our fleet is impeccably maintained. They are cleaned and serviced regularly
-                        thus giving trouble
-                        free service. Self drive cars in Goa of sedan variety is demanded most. They are comfortable,
-                        aesthetically designed,
-                        and ideal for journeying across the length and breadth of the state with a family of 5-7
-                        members. Self drive car rental
-                        Goa for SUVs is perfect for groups that love to be adventurous in the hilly tracks and coasts of
-                        this state. Tourists
-                        that have a passion for offbeat routes and destinations might opt for these heavier vehicles.
-                        Even when you are on an
-                        official visit it is possible to rent a car without drier in Goa. Luxury sedans from Audi and
-                        BMW are there for your
-                        taking.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    </section>
+    </div>
+
     <!-- -------------linking javascript---------- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
