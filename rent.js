@@ -12,3 +12,6 @@ function rentCar(selectid, price,name) {
 
 window.location.assign("paymentgateway.html");
 }
+window.addEventListener("load", (e) => {
+  checklogin(false);
+});

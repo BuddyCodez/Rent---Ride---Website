@@ -45,25 +45,23 @@
                         </a>
                         <ul class="dropdown-menu position-absolute" aria-labelledby="navbarDropdown"
                             style="background-color: var(--dark);">
-                            <li><a class="dropdown-item" href="#">Sedans</a></li>
-                            <li><a class="dropdown-item" href="#">Suv</a></li>
-                            <li><a class="dropdown-item" href="#">Mini Vans</a></li>
-                            <li><a class="dropdown-item" href="#">Hatchbacks</a></li>
-                            <li><a class="dropdown-item" href="#">Offroad</a></li>
-                            <li><a class="dropdown-item" href="#">Mini Bus</a></li>
-                            <li><a class="dropdown-item" href="#">Two Wheeler</a></li>
+                            <li><a class="dropdown-item" href="sydens.html">Sedans</a></li>
+                            <li><a class="dropdown-item" href="suv.html">Suv</a></li>
+                            <li><a class="dropdown-item" href="minivan.html">Mini Vans</a></li>
+                            <li><a class="dropdown-item" href="hatchbacks.html">Hatchbacks</a></li>
+                            <li><a class="dropdown-item" href="offroad.html">Offroad</a></li>
+                            <li><a class="dropdown-item" href="minibus.html">Mini Bus</a></li>
+                            <li><a class="dropdown-item" href="twowheeler.html">Two Wheeler</a></li>
 
-                            <li><a class="dropdown-item" href="#">Bus</a></li>
+                            <li><a class="dropdown-item" href="bus.html">Bus</a></li>
 
-                            <li><a class="dropdown-item" href="#">Pickup Trucks</a></li>
+                            <li><a class="dropdown-item" href="pickuptrucks.html">Pickup Trucks</a></li>
 
                         </ul>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="ContactUS">Contact Us</a>
                     </li>
                     <li class="nav-item ">
                         <a class="border-none btn-blue mb-auto ml-1" id="login" href="login.html">Login</a>
@@ -71,17 +69,15 @@
                     <li class="nav-item ">
                         <a class="border-none btn-red mb-auto login" id="register" href="register.html">Register</a>
                     </li>
-                    <li><button type="button" class="btn btn-primary position-relative" id="mail">
+                    <li><a type="button" class="btn btn-primary position-relative" id="mail" href="profile.html">
                             Profile
                             <span
                                 class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
                                 <span class="visually-hidden">New alerts</span>
                             </span>
-                        </button></li>
+                        </a></li>
                     <li><button id="logout" class="border-none btn-red mb-auto mr-left"
-                            onclick="logout();">Logout</button>
-                    </li>
-
+                            onclick="logout();">Logout</button></li>
 
                 </ul>
             </div>
@@ -98,17 +94,21 @@
     </div>
     <section class="font-poppins flex flex-colum justify-center align-center" style="margin-top: 50px"
         id="paymentgateway">
-        <div class="Card">
-            <div class="card--info--hover" id="options">Transmission:</div>
-            <div class="card--img"></div>
-            <a href="#" class="card--link">
-                <div class="card--img-hover"></div>
-            </a>
-            <div class="card--info">
-                <span class="card--category" id="price">Category</span>
-                <h3 class="card--title" id="name">Title</h3>
+
+
+        <div class="card" style="width: 18rem; border-radius: 12px;" b>
+            <img src="./static/amaze.jpg" id="card-img" class="card-img-top" alt="image"
+                style=" border-top-left-radius: 10px; border-top-right-radius: 10px;">
+            <div class="card-body">
+                <h5 class="card-title clr-theme fw-bolder" id="name">Card title</h5>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="price">PRICE</li>
+                    <li class="list-group-item" id="options">Transmission</li>
+                </ul>
             </div>
         </div>
+
         <p class="display-10 mt-3">Select PickUp date: <input type="date" name="date" id="pdate"
                 onchange="dateevent(event)"></p>
         <p class="display-10 mt-3">Select Return date: <input type="date" name="date" id="rdate"
@@ -167,118 +167,6 @@
                 transform: rotate(1200deg)
             }
         }
-
-        .card--img,
-        .card--img-hover {
-            background-image: url("./static/amaze.jpg");
-        }
-
-        .card--img {
-            visibility: hidden;
-            background-repeat: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 235px;
-            border-top-left-radius: 12px;
-            border-top-right-radius: 12px;
-        }
-
-        .card--info--hover {
-            position: absolute;
-            padding: 16px;
-            width: 100%;
-            opacity: 0;
-            top: 0;
-            z-index: 99;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: rgb(255, 255, 255);
-            text-shadow: black 2px 2px;
-            font-family: "Poppins", sans-serif;
-        }
-
-        .card--img-hover {
-            transition: 0.2s all ease-out;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 100%;
-            position: absolute;
-            height: 235px;
-            border-top-left-radius: 12px;
-            border-top-right-radius: 12px;
-            top: 0;
-        }
-
-        .Card {
-            margin-right: 25px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
-            background-color: #fff;
-            width: 33.3%;
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
-            margin-bottom: 50px;
-            cursor: pointer;
-        }
-
-        @media (max-width:993px) {
-            .Card {
-                width: 84%;
-                margin-bottom: 50px;
-            }
-        }
-
-        .Card:hover {
-            box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-            transform: scale(1.09, 1.09);
-        }
-
-        .card--info {
-            text-transform: uppercase;
-            z-index: 2;
-            background-color: #fff;
-            border-top-left-radius: 12px;
-            border-top-right-radius: 12px;
-            padding: 16px 24px 24px 24px;
-
-        }
-
-        .card--category {
-            text-transform: uppercase;
-            font-family: "Poppins", sans-serif;
-            font-size: 13px;
-            letter-spacing: 2px;
-            font-weight: 500;
-            color: var(--theme);
-            text-shadow: none;
-        }
-
-        .card--title {
-            margin-top: 5px;
-            margin-bottom: 10px;
-            font-family: 'Hammersmith One', sans-serif;
-        }
-
-        .Card:hover .card--img-hover {
-            height: 100%;
-            opacity: 1;
-
-        }
-
-        .Card:hover .card--info {
-            background-color: transparent;
-            position: relative;
-            color: #ffffff;
-            text-shadow: black 2px 2px;
-        }
-
-        .Card:hover .card--info--hover {
-            opacity: 1;
-        }
     </style>
     <!-- -------------linking javascript---------- -->
 
@@ -289,13 +177,21 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <script src="rent.js"></script>
+    <script src="./logincheck.js"></script>
     <script src="logincheck.js">
     </script>
     <script>
         checklogin(false);
         window.addEventListener("load", function () {
+
             setTimeout(() => {
-                document.querySelector("#loader").style.display = "none"
+                let logged = localStorage.getItem("logged");
+                if (!logged) {
+                    return alert("You Must Login Before Acessing this Page.");
+                    window.location.href = "index.html";
+                }
+                document.querySelector("#loader").style.display = "none";
+
             }, 1800)
             // clearing value of date selecter;
             document.getElementById('pdate').value = null;
@@ -307,23 +203,23 @@
             let image = localStorage.getItem("vehicle_img");
             let price = localStorage.getItem("vehicle_price");
             let options = localStorage.getItem("vehicle_options");
-            let image_el = document.querySelector(".card--img");
+            let image_el = document.querySelector("#card-img");
             let total_price = document.getElementById("payment");
 
 
-            let another_img = document.querySelector(".card--img-hover");
+            let another_img = document.querySelector(".Card--img-hover");
             if (image != null && price != null && name != null && options != null) {
-                image_el.style.backgroundImage = "url(" + image + ")";
-                another_img.style.backgroundImage = "url(" + image + ")";
+                image_el.src = image;
+
                 document.querySelector("#name").innerHTML = name;
-                document.querySelector("#price").innerHTML = price + "/day";
+                document.querySelector("#price").innerHTML = "Price: " + price + "/day";
                 document.querySelector("#options").innerHTML = `Transmission: ${options}`;
                 total_price.innerHTML = price;
             }
         })
-              
+
         function payment() {
-            
+
             let name = localStorage.getItem("vehicle_name");
             let image = localStorage.getItem("vehicle_img");
             let options = localStorage.getItem("vehicle_options");
@@ -345,39 +241,39 @@
             if (Return < pickup || !Return || !pickup) {
                 alert("Please Enter a Valid Pickup and Return Date.");
                 document.getElementById('pay').disabled = false;
-                document.getElementById('pay').innerHTML = `Pay Now`;   
+                document.getElementById('pay').innerHTML = `Pay Now`;
             } else {
-            // ---------------- checking payment method -----------------
+                // ---------------- checking payment method -----------------
 
-            var radios = document.getElementsByName("inlineRadioOptions");
-            var selected = Array.from(radios).find(radio => radio.checked);
+                var radios = document.getElementsByName("inlineRadioOptions");
+                var selected = Array.from(radios).find(radio => radio.checked);
 
 
-            let total_price = document.getElementById("payment");
-            localStorage.setItem("cost", total_price.textContent)
-            localStorage.setItem("mode", selected.value)
-            const CarObject = {
-                name: name,
-                image: image,
-                price: total_price.textContent,
-                options: options,
-                mode: selected.value,
-                pick: pickup,
-                return: Return,
+                let total_price = document.getElementById("payment");
+                localStorage.setItem("cost", total_price.textContent)
+                localStorage.setItem("mode", selected.value)
+                const CarObject = {
+                    name: name,
+                    image: image,
+                    price: total_price.textContent,
+                    options: options,
+                    mode: selected.value,
+                    pick: new Date(el1),
+                    return: new Date(el2),
+                }
+                let obj = JSON.stringify(CarObject)
+                localStorage.setItem("details", obj);
+
+                // console.log(obj) 
+                // console.log(JSON.parse(obj))
+
+                setTimeout(() => {
+                    window.location.href = "profile.html";
+                }, 800);
             }
-             let obj = JSON.stringify(CarObject)
-            localStorage.setItem("details", obj);
-           
-            // console.log(obj)
-            // console.log(JSON.parse(obj))
-            
-            setTimeout(() => {
-                window.location.href = "profile.html";
-            }, 800);
-        }
             //----------------- END ----------------
         }
-    let pickup, Return, Days;
+        let pickup, Return, Days;
         function dateevent(event) {
             console.log("on change is fired")
             let total_price = document.getElementById("payment");

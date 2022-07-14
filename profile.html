@@ -1,15 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rent & Ride</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="card.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- -------------  styles  ---------- -->
+    <link rel="stylesheet" href="navbar.css">
+    <!-- ############ NAVBAR ############## -->
+    <nav class="navbar sticky-top navbar-dark bg-color navbar-expand-lg" style="z-index: 100000000000000;">
+        <a class="navbar-brand nav-head" href="#">Rent & Ride</a>
+        <button class="navbar-toggler" style="color: transparent;border-color: transparent" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg"
+            aria-labelledby="navbarOffcanvasLgLabel" style="background: var(--dark)">
+            <div class="offcanvas-header">
+                <h1 class="font-poppins clr-bg" style="font-size: 20px; margin-top: 8px;">Rent & Ride </h1>
+                <button type="button" class="toggler text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><span
+                        class="clr-bg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                        </svg></span></button>
+            </div>
+            <div id="nav-holder" class="offcanvas-body flex justify-center align-center clr-bg">
+                <ul id="nav-list" class="navbar-nav mb-2 mb-lg-0 flex justify-center align-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#AboutUs">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="offcanvasnavbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="true">
+                            Vehicles
+                        </a>
+                        <ul class="dropdown-menu position-absolute" aria-labelledby="offcanvasnavbarDropdown"
+                            style="background-color: var(--dark);">
+                            <li><a class="dropdown-item" href="sydens.html">Sedans</a></li>
+                            <li><a class="dropdown-item" href="suv.html">Suv</a></li>
+                            <li><a class="dropdown-item" href="minivan.html">Mini Vans</a></li>
+                            <li><a class="dropdown-item" href="hatchbacks.html">Hatchbacks</a></li>
+                            <li><a class="dropdown-item" href="offroad.html">Offroad</a></li>
+                            <li><a class="dropdown-item" href="minibus.html">Mini Bus</a></li>
+                            <li><a class="dropdown-item" href="twowheeler.html">Two Wheeler</a></li>
+
+                            <li><a class="dropdown-item" href="bus.html">Bus</a></li>
+
+                            <li><a class="dropdown-item" href="pickuptrucks.html">Pickup Trucks</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ContactUS">Contact Us</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="border-none btn-blue mb-auto ml-1" id="login" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="border-none btn-red mb-auto login" id="register" href="register.html">Register</a>
+                    </li>
+                    <li><a type="button" class="btn btn-primary position-relative" id="mail" href="profile.html">
+                            Profile
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </a></li>
+                    <li><button id="logout" class="border-none btn-red mb-auto mr-left"
+                            onclick="logout();">Logout</button></li>
+               
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        #myimg {
+            width: auto;
+            height: 22rem;
+            border-radius: 14px;
+            filter: drop-shadow(0 0 5px rgb(0, 0, 0, 1));
+            margin-top: 50px;
+            transition: all 200ms ease-in-out;
+        }
+
+        #myimg:hover {
+            transform: scale(0.90);
+        }
+        @media (max-width:992px) {
+            #myimg {
+                height: 13rem;
+            }
+        }
+    </style>
 </head>
-<body>
+
+<body background="white">
+    <section>
+        <div class="flex justify-center align-center flex-colum font-hamer">
+            <img src="" alt="" id="myimg">
+            <h1 id="name" class="mt-2 ">text</h1>
+            <p class="display-9" id="price">Rent Price: </p>
+            <p class="display-9" id="mode">Paymeny Mode: </p>
+            <p class="display-9" id="option">Option: </p>
+            <p class="display-9" id="Rent">Is Still Rented: </p>
+        </div>
+    </section>
     <script>
-        let newObj = window.localStorage.getItem("details")
-        console.log(JSON.parse(newObj));
+        let newObj = window.localStorage.getItem("details");
+        if (!newObj) {
+            alert("You dont Rented any Vehicle.");
+        } else {
+            let data = JSON.parse(newObj);
+            let img = document.querySelector('#myimg');
+            img.src = data.image;
+            console.log(data)
+            document.getElementById('name').innerHTML = data.name;
+            document.getElementById('price').innerHTML = `Rent Price: ${data.price}`;
+            document.getElementById('mode').innerHTML = `Paymeny Mode: ${data.mode}`;
+            document.getElementById('option').innerHTML = `Option: ${data.options}`;
+            let nowdate = new Date(data.return);
+
+            if (new Date().getDate() == nowdate.getDate()) {
+                document.getElementById('Rent').innerHTML = `Is Still Rented: No`;
+
+            } else {
+                document.getElementById('Rent').innerHTML = `Is Still Rented: Yes`;
+            }
+        }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="rent.js"></script>
+    <script src="./logincheck.js"></script>
+
 </body>
+
 </html>

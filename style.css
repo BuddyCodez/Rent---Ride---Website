@@ -9,6 +9,7 @@
   --bus: #c0aa86;
   --bike: #ffffff;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -81,7 +82,12 @@ body {
   color: #000000;
 }
  .bus.card:before {
+    color: #000000;
   background: var(--bus);
+ 
+}
+.bus.card h3{
+    color: #000000;
 }
 
  .bus.card:after {
@@ -191,7 +197,11 @@ section {
 }
 
 #mail {
+  margin-left: 10px;
   display: none;
+}
+#login{
+  margin-right: 10px;
 }
 #logout {
   display: none;
