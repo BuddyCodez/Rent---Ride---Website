@@ -15,10 +15,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-a:focus {
-  outline: none;
-  box-shadow: none;
-}
+
 
 a {
   text-decoration: none;
@@ -92,7 +89,7 @@ body {
 
  .bus.card:after {
   content: "Bus";
-  top: 40%;
+  top: 60%;
   left: 25%;
   font-size: 6em;
 }
