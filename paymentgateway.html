@@ -114,7 +114,9 @@
                 onchange="dateevent(event)"></p>
         <p class="display-10 mt-3">Select Return date: <input type="date" name="date" id="rdate"
                 onchange="dateevent(event)"></p>
+                <h6>Renting For: <span id="totaldays">1d</span></h6>
         <h6>Select a Payment Method:</h6>
+
         <div class="flex flex-wrap">
 
             <div class="form-check form-check-inline">
@@ -236,8 +238,8 @@
 
             }
             // ---------------- END ----------------
-            let pickup = new Date(el1).getDate();
-            let Return = new Date(el2).getDate();
+            let pickup = new Date(el1)
+            let Return = new Date(el2)
             document.getElementById('pay').disabled = true;
             let button = document.getElementById('pay').innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Processing Payment.....`;
             if (Return < pickup || !Return || !pickup) {
@@ -273,21 +275,36 @@
             }
             //----------------- END ----------------
         }
+        function differenceInMonths(date1, date2) {
+            const monthDiff = date1.getMonth() - date2.getMonth();
+            const yearDiff = date1.getYear() - date2.getYear();
+
+            return monthDiff + yearDiff * 12;
+        }
         let pickup, Return, Days;
         function dateevent(event) {
             console.log("on change is fired")
             let total_price = document.getElementById("payment");
             let price = localStorage.getItem("vehicle_price");
 
-            (event.target.id == "pdate") ? (pickup = new Date(event.target.value).getDate()) : (Return = new Date(event.target.value).getDate())
-            Days = Return - pickup;
+            (event.target.id == "pdate") ? (pickup = new Date(event.target.value)) : (Return = new Date(event.target.value))
+            if (pickup && Return) {
+                Days = Math.floor((Return - pickup) / (1000 * 60 * 60 * 24));
+                document.getElementById('totaldays').innerHTML = Days + " Days";
+            }
             if (!pickup || !Return) {
                 total_price.innerHTML = price;
+                 document.getElementById('totaldays').innerHTML = 1 + " Days";
             }
             if (pickup && Return && Days) {
-                console.log(Days)
                 total_price.innerHTML = price * Days;
             }
+            if (Days < 0) {
+                alert("Please Enter a Valid Pickup and Return Date.");
+                document.getElementById('pay').disabled = false;
+                document.getElementById('pay').innerHTML = `Pay Now`;
+            }
+
         }
     </script>
 </body>
