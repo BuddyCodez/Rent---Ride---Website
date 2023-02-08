@@ -26,6 +26,12 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
+#nav-holder {
+  padding: 10px;
+}
+.navbar-brand {
+  padding: 10px;
+}
 .hero-visit {
   color: white;
   text-decoration-color: transparent;
