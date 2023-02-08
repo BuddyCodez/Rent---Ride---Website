@@ -24,6 +24,7 @@ body {
   color: var(--bg);
   height: auto;
   width: 100vw;
+  overflow-x: hidden;
 }
 .hero-visit {
   color: white;
